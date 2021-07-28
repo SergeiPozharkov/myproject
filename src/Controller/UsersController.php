@@ -6,7 +6,7 @@ namespace App\Controller;
 
 use App\Model\UsersModel;
 
-class Users extends Table
+class UsersController extends Table
 {
     protected string $tableName = "users";
 

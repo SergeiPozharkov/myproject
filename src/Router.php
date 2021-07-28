@@ -6,7 +6,7 @@ class Router
 {
     public function run(): void
     {
-        $type = $_GET["type"] . "Controller" ?? "MainController";
+        $type = $_GET["type"] ?? "MainController";
         $action = "action" . ($_GET["action"] ?? "index");
         $controllerName = "App\\Controller\\$type";
         $userGroup = $_SESSION['user']['code'] ?? 'guest';

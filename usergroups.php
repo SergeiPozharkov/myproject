@@ -1,23 +1,22 @@
 <?php
 return [
     "admin" => [
-        "Aut",
-        "Gb",
-        "Main",
-        "Opros",
-        "Ved",
-        "Users",
-        "UserGroups"
+        "AutController",
+        "MainController",
+        "UsersController",
+        "UserGroupsController",
+        "ReviewsController",
+        "OrganisationsController"
     ],
     "user" => [
-        "Aut",
-        "Gb",
-        "Main",
-        "Opros",
-        "Ved"
+        "AutController",
+        "MainController",
+        "ReviewsController",
+        "OrganisationsController"
     ],
     "guest" => [
-        "Aut",
-        "Main"
+        "AutController",
+        "MainController",
+        "ReviewsController"
     ]
 ];

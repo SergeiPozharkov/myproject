@@ -7,7 +7,7 @@ namespace App\Controller;
 use App\Helper\Password;
 use App\Model\AutModel;
 
-class Aut extends AbstractController
+class AutController extends AbstractController
 {
     /**
      * @var AutModel

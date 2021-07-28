@@ -6,7 +6,7 @@ namespace App\Controller;
 
 use App\View\View;
 
-class Main extends AbstractController
+class MainController extends AbstractController
 {
     public function actionIndex(): void
     {

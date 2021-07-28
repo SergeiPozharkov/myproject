@@ -7,16 +7,15 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link<?= $this->data['controllerName'] == "Main" ? " active" : "" ?>" href="?">Home <span
-                            class="sr-only">(current)</span></a>
+                <a class="nav-link<?= $this->data['controllerName'] == "MainController" ? " active" : "" ?>" href="?">Главная</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link<?= $this->data['controllerName'] == "Aut" ? " active" : "" ?>"
-                   href="?type=Aut&action=show">Войти</a>
+                <a class="nav-link<?= $this->data['controllerName'] == "AutController" ? " active" : "" ?>"
+                   href="?type=AutController&action=show">Войти</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link<?= $this->data['controllerName'] == "Aut" ? " active" : "" ?>"
-                   href="?type=Aut&action=showreg">Регистрация</a>
+                <a class="nav-link<?= $this->data['controllerName'] == "AutController" ? " active" : "" ?>"
+                   href="?type=AutController&action=showreg">Регистрация</a>
             </li>
         </ul>
     </div>
