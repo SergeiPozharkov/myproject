@@ -22,6 +22,7 @@ abstract class AbstractController
 
     public function getCurrentClass(): string
     {
-        return (new \ReflectionClass($this))->getShortName();
+        $current = (new \ReflectionClass($this))->getShortName();
+        return str_replace("Controller", "", $current);
     }
 }

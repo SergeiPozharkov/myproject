@@ -2,7 +2,7 @@
   "description": "simple MVC application",
   "license": "MIT",
   "require": {
-    "w1020/orm": "^2.1",
+    "w1020/orm": "^v3.0",
     "w1020/html": "^0.0.7"
   },
   "require-dev": {

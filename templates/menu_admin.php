@@ -10,6 +10,10 @@
                 <a class="nav-link<?= $this->data['controllerName'] == "MainController" ? " active" : "" ?>" href="?">Главная</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link<?= $this->data['controllerName'] == "ReviewsController" ? " active" : "" ?>"
+                   href="?type=Reviews&action=show">Показать таблицу Reviews</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link<?= $this->data['controllerName'] == "UsersController" ? " active" : "" ?>"
                    href="?type=Users&action=show">Показать таблицу Users</a>
             </li>
