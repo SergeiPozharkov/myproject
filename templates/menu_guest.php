@@ -11,11 +11,11 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link<?= $this->data['controllerName'] == "AutController" ? " active" : "" ?>"
-                   href="?type=AutController&action=show">Войти</a>
+                   href="?type=Aut&action=show">Войти</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link<?= $this->data['controllerName'] == "AutController" ? " active" : "" ?>"
-                   href="?type=AutController&action=showreg">Регистрация</a>
+                   href="?type=Aut&action=showreg">Регистрация</a>
             </li>
         </ul>
     </div>

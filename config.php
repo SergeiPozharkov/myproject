@@ -6,5 +6,4 @@ return [
     "dbname" => "reviews_db",
     "page_size" => 5,
     "salt" => "kjsksdjt5859fdjkdfdfj"
-//    "table" => "ved"
 ];

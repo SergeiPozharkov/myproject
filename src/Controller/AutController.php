@@ -51,16 +51,17 @@ class AutController extends AbstractController
         if ($_POST['pass1'] != $_POST['pass2']) {
             $_SESSION['warnings'][] = 'Пароли не совпадают!';
             $ok = false;
-        } elseif (!$pass->checkMinSize()) {
-            $_SESSION['warnings'][] = 'Пароль не может быть меньше 8 символов!';
-            $ok = false;
-        } elseif (!$pass->checkMaxSize()) {
-            $_SESSION['warnings'][] = 'Пароль не может быть больше 128 символов!';
-            $ok = false;
-        } elseif (!$pass->checkLatin()) {
-            $_SESSION['warnings'][] = 'Пароль должен содержать латинские символы!';
-            $ok = false;
         }
+//        elseif (!$pass->checkMinSize()) {
+//            $_SESSION['warnings'][] = 'Пароль не может быть меньше 8 символов!';
+//            $ok = false;
+//        } elseif (!$pass->checkMaxSize()) {
+//            $_SESSION['warnings'][] = 'Пароль не может быть больше 128 символов!';
+//            $ok = false;
+//        } elseif (!$pass->checkLatin()) {
+//            $_SESSION['warnings'][] = 'Пароль должен содержать латинские символы!';
+//            $ok = false;
+//        }
 //        elseif (!$pass->checkUpperLowerSymbols()) {
 //            $_SESSION['warnings'][] = 'Пароль должен содержать верхний и нижний регистр!';
 //            $ok = false;

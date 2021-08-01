@@ -11,14 +11,14 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link<?= $this->data['controllerName'] == "UsersController" ? " active" : "" ?>"
-                   href="?type=UsersController&action=show">Показать таблицу Users</a>
+                   href="?type=Users&action=show">Показать таблицу Users</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link<?= $this->data['controllerName'] == "UserGroupsController" ? " active" : "" ?>"
-                   href="?type=UserGroupsController&action=show">Показать таблицу UserGroups</a>
+                   href="?type=UserGroups&action=show">Показать таблицу UserGroups</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="?type=AutController&action=logout">Выйти</a>
+                <a class="nav-link" href="?type=Aut&action=logout">Выйти</a>
             </li>
         </ul>
     </div>
