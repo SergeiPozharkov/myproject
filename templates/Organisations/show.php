@@ -4,7 +4,7 @@ use W1020\HTML\Pagination;
 use W1020\HTML\Table;
 
 
-//print_r($this->data['table']);
+print_r($this->data['table']);
 echo <<<HTML
 <div class="container">
   <div class="row">
@@ -27,14 +27,6 @@ foreach ($this->data['table'] as $row) {
     echo "<a href='?type={$this->data['controllerName']}&action=showedit&id=$row[id]'>✏</a></td></tr>";
 }
 echo "</table>";
-//echo <<<HTML
-//</div>
-//    <div class="col">
-//      Column
-//    </div>
-//  </div>
-//</div>
-//HTML;
 echo (new Pagination())
     ->setUrlPrefix("?type={$this->data['controllerName']}&action=show&page=")
     ->setPageCount($this->data["pageCount"])
