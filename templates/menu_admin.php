@@ -14,6 +14,10 @@
                    href="?type=Reviews&action=show">Показать таблицу Reviews</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link<?= $this->data['controllerName'] == "OrganisationsController" ? " active" : "" ?>"
+                   href="?type=Organisations&action=show">Показать таблицу Organisations</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link<?= $this->data['controllerName'] == "UsersController" ? " active" : "" ?>"
                    href="?type=Users&action=show">Показать таблицу Users</a>
             </li>
