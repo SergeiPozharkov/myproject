@@ -4,7 +4,7 @@ use W1020\HTML\Pagination;
 use W1020\HTML\Table;
 
 
-print_r($this->data['table']);
+//print_r($this->data['table']);
 echo <<<HTML
 <div class="container">
   <div class="row">
