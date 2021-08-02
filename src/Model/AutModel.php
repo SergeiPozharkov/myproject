@@ -58,7 +58,7 @@ SQL;
      */
     public function addNewUser(string $login, string $pass, string $name): void
     {
-        $guestId = $this->query("SELECT `id` FROM `user_groups` WHERE `code` = 'guest'")[0]['id'];
+        $guestId = $this->query("SELECT `id` FROM `user_groups` WHERE `code` = 'user'")[0]['id'];
 //        echo $sql = "INSERT INTO `users`(`login`, `pass`, `name`, `user_group`) " .
 //            "VALUES ('$login','$pass','$name','$guestId')";
         $this->runSQL("INSERT INTO `users`(`login`, `pass`, `name`, `user_groups_id`) " .

@@ -52,7 +52,7 @@ class ReviewsController extends Table
             ->addData([
 //                "row" => $this->model->getRow($_GET['id']),
                 "comments" => $this->model->columnComments(),
-//                "row" => $this->model->getReview($_GET['id']),
+                "row" => $this->model->getOrganisationAndUserName(),
                 "action" => "?type=" . ($this->getCurrentClass()) . "&action=add"
             ])
             ->setTemplate('Reviews/add_edit');

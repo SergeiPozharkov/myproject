@@ -35,4 +35,25 @@ SQL;
         return $query;
 
     }
+
+    public function getOrganisationAndUserName()
+    {
+        $sql = <<<SQL
+SELECT
+    `organisations`.`name` AS 'organisations_id',
+    `users`.`name` AS 'users_id'
+FROM
+    `reviews`,
+    `users`,
+    `organisations`
+WHERE
+    `reviews`.`organisations_id` = `organisations`.`id` AND `reviews`.`users_id` = `users`.`id`
+SQL;
+        $data = $this->query($sql);
+        $query = [];
+        foreach ($data as $row) {
+            $query = $row;
+        }
+        return $query;
+    }
 }
