@@ -18,8 +18,8 @@ SELECT
     `reviews`.`title`,
     `reviews`.`review`,
     `reviews`.`date`,
-    `organisations`.`name`,
-    `users`.`name`
+    `organisations`.`name` AS 'organisations_id',
+    `users`.`name` AS 'users_id'
 FROM
     `reviews`,
     `users`,
@@ -27,7 +27,12 @@ FROM
 WHERE
     `reviews`.`organisations_id` = `organisations`.`id` AND `reviews`.`users_id` = `users`.`id` AND `reviews`.`id` = $reviewId
 SQL;
+        $data = $this->query($sql);
+        $query = [];
+        foreach ($data as $row) {
+            $query = $row;
+        }
+        return $query;
 
-        return $this->query($sql);
     }
 }

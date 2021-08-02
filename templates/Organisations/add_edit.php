@@ -13,10 +13,14 @@
                     <?php
 
                     foreach ($this->data["comments"] as $field => $value) {
-                        echo $value . "<br>";
                         if ($field == "description") {
+                            echo $value . "<br>";
                             echo "<textarea class='form-control' class='news_text' name='$field'>" . ($this->data['row'][$field] ?? "") . "</textarea><br>";
+                        } elseif ($field == "social_networks") {
+                            echo $value . "<br>";
+                            echo "<input class='form-control' name='$field' value='" . ($this->data['row'][$field] ?? "") . "'><br>";
                         } else {
+                            echo $value . " * <br>";
                             echo "<input class='form-control' name='$field' value='" . ($this->data['row'][$field] ?? "") . "'><br>";
                         }
                     }
