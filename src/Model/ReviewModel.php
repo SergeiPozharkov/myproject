@@ -38,10 +38,10 @@ SQL;
 
     public function getUsersList(): array
     {
-        $data = $this->query("SELECT `id`,`login` FROM `users`");
+        $data = $this->query("SELECT `id`,`name` AS 'user_name' FROM `users`");
         $arr = [];
         foreach ($data as $row) {
-            $arr[$row['id']] = $row['login'];
+            $arr[$row['id']] = $row['user_name'];
         }
         return $arr;
     }

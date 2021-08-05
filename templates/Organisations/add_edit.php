@@ -5,7 +5,6 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            Column
         </div>
         <div class="col">
             <div class="container">
@@ -19,9 +18,21 @@
                         } elseif ($field == "social_networks") {
                             echo $value . "<br>";
                             echo "<input class='form-control' name='$field' value='" . ($this->data['row'][$field] ?? "") . "'><br>";
-                        } elseif ($field == "working_hours") {
+                        } elseif ($field == "working_hours" && empty($this->data['row'][$field])) {
                             echo $value . " * <br>";
-                            echo "<input type='time' class='form-control' name='$field' value='" . ($this->data['row'][$field] ?? "") . "'><br>";
+                            echo "<span>Дни недели:</span>" . $select = <<<SELECT
+<select name="week_days">
+  <option value="Пн.-Вс.:">Пн.-Вс.:</option>
+  <option value="Пн.-Пт.:">Пн.-Пт.:</option>
+  <option value="Пн.-Сб.:">Пн.-Сб.:</option>
+</select>
+SELECT;
+                            echo "<br> <span>С:</span><input id='working_hours' type='number' name='start_hours'>:<input id='working_hours' type='number' name='start_minutes'><br>";
+                            echo " <span>По:</span><input id='working_hours' type='number' name='end_hours'>:<input id='working_hours' type='number' name='end_minutes'><br>";
+
+                        } elseif ($field == "working_hours" && !empty($this->data['row'][$field])) {
+                            echo $value . " * <br>";
+                            echo "<input type='text' class='form-control' name='$field' value='" . ($this->data['row'][$field] ?? "") . "'><br>";
                         } else {
                             echo $value . " * <br>";
                             echo "<input class='form-control' name='$field' value='" . ($this->data['row'][$field] ?? "") . "'><br>";
@@ -33,7 +44,6 @@
             </div>
         </div>
         <div class="col">
-            Column
         </div>
     </div>
 </div>
