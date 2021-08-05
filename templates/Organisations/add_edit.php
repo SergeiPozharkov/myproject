@@ -19,6 +19,9 @@
                         } elseif ($field == "social_networks") {
                             echo $value . "<br>";
                             echo "<input class='form-control' name='$field' value='" . ($this->data['row'][$field] ?? "") . "'><br>";
+                        } elseif ($field == "working_hours") {
+                            echo $value . " * <br>";
+                            echo "<input type='time' class='form-control' name='$field' value='" . ($this->data['row'][$field] ?? "") . "'><br>";
                         } else {
                             echo $value . " * <br>";
                             echo "<input class='form-control' name='$field' value='" . ($this->data['row'][$field] ?? "") . "'><br>";

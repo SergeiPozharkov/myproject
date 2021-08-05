@@ -1,46 +1,39 @@
 <?php
 //print_r($this->data);
 
+use W1020\HTML\Select; ?>
 
-?>
+<form action="<?= $this->data['action'] ?>" method="post">
+    <?php
+    foreach ($this->data["comments"] as $field => $value) {
+        if ($field == "organisations_id") {
+            echo $value . "<br>";
+            echo (new Select())
+                    ->setName($field)
+                    ->setData($this->data["organisationsList"])
+                    ->setSelected($this->data["row"]['organisations_id'] ?? "")
+                    ->html() . '<br>';
+        } elseif ($field == "users_id") {
+            echo $value . "<br>";
+            echo (new Select())
+                    ->setName($field)
+                    ->setData($this->data["usersList"])
+                    ->setSelected($this->data["row"]['users_id'] ?? "")
+                    ->html() . '<br>';
+        } elseif ($field == "date") {
+            echo "<input type='hidden' name='$field' value='" . ($this->data['row'][$field] ?? date('Y-m-d H:i:s')) . "'>";
+        } elseif ($field == "review") {
+            echo $value . "<br>";
+            echo "<textarea id='review_text' name='$field'>" . ($this->data['row'][$field] ?? "") . "</textarea><br>";
+        } elseif ($field == "title") {
+            echo $value . "<br>";
+            echo "<input id='review_title' name='$field' value='" . ($this->data['row'][$field] ?? "") . "'><br>";
+        } else {
+            echo $value . "<br>";
+            echo "<input name='$field' value='" . ($this->data['row'][$field] ?? "") . "'><br>";
+        }
+    }
 
-
-<div class="container">
-    <div class="row">
-        <div class="col">
-            Column
-        </div>
-        <div class="col">
-            <div class="container">
-                <form action="<?= $this->data['action'] ?>" method="post">
-                    <?php
-                    //                                                            unset($this->data["comments"]['picture']);
-                    //                    unset($this->data["comments"]['date'], $this->data["comments"]['organisations_id'], $this->data["comments"]['users_id']);
-
-                    foreach ($this->data["comments"] as $field => $value) {
-
-                        if ($field == "date") {
-                            echo "<input type='hidden' name='$field' value='" . ($this->data['row'][$field] ?? date('YYYY-MM-DD hh:mm:ss')) . "'>";
-                        }
-
-                        if ($field == "organisations_id" || $field == "users_id") {
-                            echo "<input type='hidden' name='$field' value='" . ($this->data['row'][$field] ?? "") . "'>";
-                        }
-                        if ($field == "review") {
-                            echo $value . "<br>";
-                            echo "<textarea class='form-control' class='news_text' name='$field'>" . ($this->data['row'][$field] ?? "") . "</textarea><br>";
-                        } elseif ($field == "title") {
-                            echo $value . "<br>";
-                            echo "<input class='form-control' name='$field' value='" . ($this->data['row'][$field] ?? "") . "'><br>";
-                        }
-                    }
-                    ?>
-                    <input type="submit" value="ok" class="btn btn-primary">
-                </form>
-            </div>
-        </div>
-        <div class="col">
-            Column
-        </div>
-    </div>
-</div>
+    ?>
+    <input type="submit" value="ok" class="btn btn-primary">
+</form>

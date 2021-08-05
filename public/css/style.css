@@ -1,7 +1,10 @@
-.news_text {
+#review_text {
     width: 500px;
     height: 100px;
-    color: blueviolet;
+}
+
+#review_title {
+    width: 300px;
 }
 
 .block_news_edit {

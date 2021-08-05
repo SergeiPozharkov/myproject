@@ -36,24 +36,24 @@ SQL;
 
     }
 
-    public function getOrganisationAndUserName()
+    public function getUsersList(): array
     {
-        $sql = <<<SQL
-SELECT
-    `organisations`.`name` AS 'organisations_id',
-    `users`.`name` AS 'users_id'
-FROM
-    `reviews`,
-    `users`,
-    `organisations`
-WHERE
-    `reviews`.`organisations_id` = `organisations`.`id` AND `reviews`.`users_id` = `users`.`id`
-SQL;
-        $data = $this->query($sql);
-        $query = [];
+        $data = $this->query("SELECT `id`,`login` FROM `users`");
+        $arr = [];
         foreach ($data as $row) {
-            $query = $row;
+            $arr[$row['id']] = $row['login'];
         }
-        return $query;
+        return $arr;
     }
+
+    public function getOrganisationsList(): array
+    {
+        $data = $this->query("SELECT `id`,`name` FROM `organisations`");
+        $arr = [];
+        foreach ($data as $row) {
+            $arr[$row['id']] = $row['name'];
+        }
+        return $arr;
+    }
+
 }

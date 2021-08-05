@@ -8,13 +8,13 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="/public/css/style.css">
 </head>
 <body>
 <?php
 
 include "menu_" . ($_SESSION['user']['code'] ?? 'guest') . ".php";
 ?>
-<?= isset($_SESSION['user']['code']) ? $_SESSION['user']['name'] : "" ?>
 <?php
 if (!empty($_SESSION['warnings'])) {
     foreach ($_SESSION['warnings'] as $warning) {
