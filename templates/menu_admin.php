@@ -11,19 +11,19 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link<?= $this->data['controllerName'] == "ReviewsController" ? " active" : "" ?>"
-                   href="?type=Reviews&action=show">Показать таблицу Reviews</a>
+                   href="?type=Reviews&action=show">Отзывы</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link<?= $this->data['controllerName'] == "OrganisationsController" ? " active" : "" ?>"
-                   href="?type=Organisations&action=show">Показать таблицу Organisations</a>
+                   href="?type=Organisations&action=show">Организации</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link<?= $this->data['controllerName'] == "UsersController" ? " active" : "" ?>"
-                   href="?type=Users&action=show">Показать таблицу Users</a>
+                   href="?type=Users&action=show">Пользователи</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link<?= $this->data['controllerName'] == "UserGroupsController" ? " active" : "" ?>"
-                   href="?type=UserGroups&action=show">Показать таблицу UserGroups</a>
+                   href="?type=UserGroups&action=show">Группы пользователей</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link"

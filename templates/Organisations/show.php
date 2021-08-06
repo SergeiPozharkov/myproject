@@ -9,7 +9,7 @@ echo <<<HTML
 <div class="container">
   <div class="row">
     <div class="col">
-      Column
+      
     </div>
     <div class="col">
 HTML;
@@ -35,7 +35,7 @@ echo (new Pagination())
 echo <<<HTML
 </div>
     <div class="col">
-      Column
+   
     </div>
   </div>
 </div>

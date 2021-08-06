@@ -12,7 +12,8 @@ return [
         "AutController",
         "MainController",
         "ReviewsController",
-        "OrganisationsController"
+        "OrganisationsController",
+        "UserShowReviewsController"
     ],
     "guest" => [
         "AutController",

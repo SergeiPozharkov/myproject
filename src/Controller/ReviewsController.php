@@ -4,7 +4,7 @@
 namespace App\Controller;
 
 
-use App\Model\ReviewModel;
+use App\Model\ReviewsModel;
 
 class ReviewsController extends Table
 {
@@ -16,7 +16,7 @@ class ReviewsController extends Table
         $config = include __DIR__ . "/../../config.php";
         $config["table"] = $this->tableName;
         $this->pageSize = $config["page_size"];
-        $this->model = new ReviewModel($config);
+        $this->model = new ReviewsModel($config);
     }
 
 
