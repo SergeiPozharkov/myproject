@@ -29,7 +29,7 @@ SQL;
         $data = $this->query($sql);
         $query = [];
         foreach ($data as $row) {
-            $query [] = $row;
+            $query = $row;
         }
         return $query;
 
@@ -44,8 +44,9 @@ SELECT
     `reviews`.`title`,
     `reviews`.`review`,
     `reviews`.`date`,
-    `organisations`.`name` AS 'organisations_id',
-    `users`.`name` AS 'users_id'
+    `organisations`.`id` AS 'organisation_id',
+    `organisations`.`name` AS 'organisations_name',
+    `users`.`name` AS 'users_name'
 FROM
     `reviews`,
     `users`,
@@ -70,8 +71,9 @@ SELECT
     `reviews`.`title`,
     `reviews`.`review`,
     `reviews`.`date`,
-    `organisations`.`name` AS 'organisations_id',
-    `users`.`name` AS 'users_id'
+    `organisations`.`id` AS 'organisation_id',
+    `organisations`.`name` AS 'organisations_name',
+    `users`.`name` AS 'users_name'
 FROM
     `reviews`,
     `users`,
@@ -86,5 +88,27 @@ SQL;
             $query[] = $row;
         }
         return $query;
+    }
+
+    public function getOrganisationInfo($organisationId)
+    {
+        $data = $this->query("SELECT * FROM `organisations` WHERE `id`=$organisationId");
+        $arr = [];
+        foreach ($data as $row) {
+            $arr[] = $row;
+        }
+        return $arr;
+    }
+
+    public function organisationColumnComments()
+    {
+        $data = $this->query("SHOW FULL COLUMNS FROM `organisations`");
+        $arr = [];
+        foreach ($data as $field) {
+            if ($field['Field'] != 'id') {
+                $arr[$field['Field']] = $field['Comment'];
+            }
+        }
+        return $arr;
     }
 }
