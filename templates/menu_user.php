@@ -26,6 +26,10 @@
                    href="?type=UserShowAddOrganisation&action=showadd">Добавить организацию</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link<?= $this->data['controllerName'] == "UserShowAddReviewController" ? " active" : "" ?>"
+                   href="?type=UserShowAddReview&action=showadd">Добавить отзыв</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link"
                    href="?type=Aut&action=logout">Выйти(<?= isset($_SESSION['user']['code']) ? $_SESSION['user']['name'] : "" ?>
                     )

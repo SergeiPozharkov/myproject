@@ -14,7 +14,8 @@ return [
         "ReviewsController",
         "OrganisationsController",
         "UserShowReviewsController",
-        "UserShowAddOrganisationController"
+        "UserShowAddOrganisationController",
+        "UserShowAddReviewController"
     ],
     "guest" => [
         "AutController",
