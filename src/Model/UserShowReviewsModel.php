@@ -35,7 +35,7 @@ SQL;
 
     }
 
-
+//поправить пагинацию
     public function getReviews()
     {
         $sql = <<<SQL
