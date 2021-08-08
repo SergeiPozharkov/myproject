@@ -22,6 +22,7 @@
                             echo $value . " * <br>";
                             echo "<span>Дни недели:</span>" . $select = <<<SELECT
 <select name="week_days">
+  <option value="" style="display:none;"></option>
   <option value="Пн.-Вс.:">Пн.-Вс.:</option>
   <option value="Пн.-Пт.:">Пн.-Пт.:</option>
   <option value="Пн.-Сб.:">Пн.-Сб.:</option>
