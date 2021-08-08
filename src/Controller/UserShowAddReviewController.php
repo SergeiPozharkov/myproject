@@ -40,7 +40,7 @@ class UserShowAddReviewController extends ReviewsController
         if ($_POST && !empty($_POST['title']) != '' && !empty($_POST['review']) != '' && !empty($_POST['organisations_id']) != '') {
             if (isset($_SESSION["user"]["id"])) {
                 $this->model->addReview($_POST['title'], $_POST['review'], date('Y-m-d H:i:s'), $_POST['organisations_id'], $_SESSION['user']['id']);
-                $this->redirect("/");
+                $this->redirect("?type=UserShowReviews&action=show");
             }
         } else {
             $this->redirect("?type=UserShowAddReview&action=showadd");
