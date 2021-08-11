@@ -7,6 +7,9 @@ namespace App\Controller;
 use App\Helper\Password;
 use App\Model\AutModel;
 
+/**
+ *Отвечает за авторизацию и регистрацию пользователя, а также валидацию соответствующих форм
+ */
 class AutController extends AbstractController
 {
     /**
@@ -14,6 +17,9 @@ class AutController extends AbstractController
      */
     protected AutModel $model;
 
+    /**
+     *Осуществляет соединение с БД через "AutModel"
+     */
     public function __construct()
     {
         parent::__construct();
@@ -22,18 +28,28 @@ class AutController extends AbstractController
         $this->model = new AutModel($config);
     }
 
+    /**
+     *Отображает форму авторизации
+     */
     public function actionShow(): void
     {
         $this->view->setTemplate("Aut/login");
 //            ->view();
     }
 
+    /**
+     *Отображает форму регистрации
+     */
     public function actionShowReg(): void
     {
         $this->view->setTemplate("Aut/registration");
 //            ->view();
     }
 
+    /**
+     * Валидирует данные из формы регистрации, перед записью в БД хэширует пароли пользователей прошедших регистрацию
+     * @throws \Exception
+     */
     public function actionReg(): void
     {
         $ok = true;
@@ -96,6 +112,7 @@ class AutController extends AbstractController
     }
 
     /**
+     * Сравнивает введенные данные в форму авторизации с данными таблицы БД
      * @throws \Exception
      */
     public function actionLogin(): void
@@ -115,6 +132,9 @@ class AutController extends AbstractController
 
     }
 
+    /**
+     *Де авторизует пользователя
+     */
     public function actionLogout(): void
     {
         unset($_SESSION['user']);
