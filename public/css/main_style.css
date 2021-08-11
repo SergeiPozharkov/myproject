@@ -1,0 +1,31 @@
+#review_text {
+    width: 500px;
+    height: 100px;
+}
+
+#review_title {
+    width: 300px;
+}
+
+#working_hours {
+    width: 50px;
+}
+
+.show_review {
+    margin: 0 auto;
+    width: 700px;
+    height: 500px;
+}
+
+.block_news_edit {
+    margin: 0 auto;
+    /*position: absolute;*/
+    /*left: 50%;*/
+    /*transform: translate(-50%, 0)*/
+}
+
+.news_image {
+    width: 100px;
+    height: auto;
+    border: 1px #e22b80 solid;
+}
