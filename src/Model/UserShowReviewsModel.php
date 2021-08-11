@@ -35,8 +35,7 @@ SQL;
 
     }
 
-//поправить пагинацию
-    public function getReviews()
+    public function getPage(int $page = 1): array
     {
         $sql = <<<SQL
 SELECT
@@ -54,13 +53,9 @@ FROM
 WHERE
     `reviews`.`organisations_id` = `organisations`.`id` AND `reviews`.`users_id` = `users`.`id`
 SQL;
-
-        $data = $this->query($sql);
-        $query = [];
-        foreach ($data as $row) {
-            $query[] = $row;
-        }
-        return $query;
+        return $this->query(
+            "$sql LIMIT " . (($page - 1) * $this->pageSize) . ",$this->pageSize;"
+        );
     }
 
     public function getOrganisationReviews($organisationId)
