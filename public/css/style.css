@@ -38,8 +38,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 }
 
 #button_login {
-    /*display: flex;*/
-    /*justify-content: center;*/
+
     margin: auto;
     position: absolute;
     top: 380px;
@@ -47,14 +46,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     bottom: 0;
     right: 0;
     width: 210px;
-    /*vertical-align: middle;*/
-    /*margin: 0 auto;*/
-    /*align-items: center;*/
 }
 
 #button_reg {
-    /*display: flex;*/
-    /*justify-content: center;*/
     margin: auto;
     position: absolute;
     top: 450px;
@@ -62,15 +56,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     bottom: 0;
     right: 0;
     width: 210px;
-    /*vertical-align: middle;*/
-    /*margin: 0 auto;*/
-    /*align-items: center;*/
 }
 
 #form_title {
     color: #ff9036;
 }
 
+#reviews {
+    margin-top: 80px;
+}
 
 /*.flex_item > a::selection {*/
 /*    color: #ff9036;*/
