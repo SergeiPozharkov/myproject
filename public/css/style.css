@@ -31,11 +31,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     width: 42px !important;
 }
 
-#working_hours_item {
-    display: flex;
-    flex-direction: row;
-}
-
 .flex_item > a {
     color: white;
     margin-right: 100px;

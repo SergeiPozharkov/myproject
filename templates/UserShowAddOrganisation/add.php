@@ -20,7 +20,7 @@
                             echo "<input class='form-control' name='$field'><br>";
                         } elseif ($field == "working_hours") {
                             echo $value . " * <br>";
-                            echo "<div class='working_hours'><div id='working_hours_item'><span>Дни:</span>" . $select = <<<SELECT
+                            echo "<div class='working_hours'><div><span>Дни:</span>" . $select = <<<SELECT
 <select name="week_days" id="select">
   <option value="" style="display:none;"></option>
   <option value="Пн.-Вс.:">Пн.-Вс.:</option>
@@ -28,8 +28,8 @@
   <option value="Пн.-Сб.:">Пн.-Сб.:</option>
 </select>
 SELECT;
-                            echo "</div><div id='working_hours_item'><span>С:</span><input id='working_hours' type='number' name='start_hours'>:<input id='working_hours' type='number' name='start_minutes'></div>";
-                            echo " <div id='working_hours_item'><span>По:</span><input id='working_hours' type='number' name='end_hours'>:<input id='working_hours' type='number' name='end_minutes'></div></div><br>";
+                            echo "</div><div><span>С:</span><input id='working_hours' type='number' name='start_hours'>:<input id='working_hours' type='number' name='start_minutes'></div>";
+                            echo " <div><span>По:</span><input id='working_hours' type='number' name='end_hours'>:<input id='working_hours' type='number' name='end_minutes'></div></div><br>";
 
                         } else {
                             echo $value . " * <br>";
