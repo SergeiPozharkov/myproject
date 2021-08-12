@@ -3,17 +3,24 @@
 
 namespace App\Helper;
 
-
+/**
+ * Отвечает за проверку пароля при регистрации
+ */
 class Password
 {
     protected string $pass;
 
+    /**
+     * Инициализируется введенный пароль
+     * @param string $pass
+     */
     public function __construct(string $pass)
     {
         $this->setPass($pass);
     }
 
-    /** проверяем на минимальное число символов 8
+
+    /**
      * @param string $pass
      * @return $this
      */
@@ -23,12 +30,16 @@ class Password
         return $this;
     }
 
+    /**
+     * Проверяет минимальную длину пароля в 8 символов
+     * @return bool
+     */
     public function checkMinSize(): bool
     {
         return mb_strlen($this->pass) >= 8;
     }
 
-    /** проверяем на максимальное число символов 128
+    /** Проверяет на максимальное число символов 128
      * @return bool
      */
     public function checkMaxSize(): bool
@@ -37,31 +48,31 @@ class Password
 
     }
 
-    /** проверка на наличие арбских цифр
+    /** Проверяет на наличие арабских цифр
      * @return bool
      */
     public function containsNumbers(): bool
     {
-        return (bool) preg_match_all("/[0-9]/", $this->pass);
+        return (bool)preg_match_all("/[0-9]/", $this->pass);
     }
 
-    /** проверка на наличие кириллических букв
+    /** Проверяет на наличие кириллических букв
      * @return bool
      */
     public function checkCyrillic(): bool
     {
-        return (bool) preg_match_all("/[а-я]/iu", $this->pass);
+        return (bool)preg_match_all("/[а-я]/iu", $this->pass);
     }
 
-    /** проверка на наличие латинских букв
+    /** Проверяет на наличие латинских букв
      * @return bool
      */
     public function checkLatin(): bool
     {
-        return (bool) preg_match_all("/[a-z]/iu", $this->pass);
+        return (bool)preg_match_all("/[a-z]/iu", $this->pass);
     }
 
-    /** проверка на наличие данных символов из шаблона
+    /** Проверяет на отсутствие специфических символов в пароле
      * @return bool
      */
     public function checkForbiddenSymbols(): bool
@@ -69,7 +80,7 @@ class Password
         return !preg_match_all("/[~!?@#$%^&*_\-+()\[\]{}><\/\\\|\"\\\'\\\.,:;]/u", $this->pass);
     }
 
-    /** проверка на наличие хоты бы одной строчной и одной заглавной буквы
+    /** Проверяет на наличие хоты бы одной кириллической и(или) латинской строчной и одной заглавной буквы
      * @return bool
      */
     public function checkUpperLowerSymbols(): bool
@@ -78,12 +89,12 @@ class Password
 
     }
 
-    /** проверка на наличие пробелов
+    /** Проверяет на наличие пробелов
      * @return bool
      */
     public function checkSpaceSymbol(): bool
     {
-        return (bool) preg_match_all("/\s/iu", $this->pass);
+        return (bool)preg_match_all("/\s/iu", $this->pass);
     }
 
 
