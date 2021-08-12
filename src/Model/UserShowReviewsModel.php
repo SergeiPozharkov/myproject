@@ -4,10 +4,18 @@ namespace App\Model;
 
 use W1020\Table as ORMTable;
 
-
+/**
+ * Отвечает за обращение к таблицам "reviews", "users" и "organisations"
+ */
 class UserShowReviewsModel extends ORMTable
 {
-    public function getReviewComments($reviewId)
+    /**
+     * Выбирает все данные относящиеся к конкретному отзыву
+     * @param int $reviewId
+     * @return array<array>
+     * @throws \Exception
+     */
+    public function getReviewComments(int $reviewId): array
     {
 
         $sql = <<<SQL
@@ -35,6 +43,12 @@ SQL;
 
     }
 
+    /**
+     * Выбирает все данные относящиеся ко всем отзывам
+     * @param int $page
+     * @return array<array>
+     * @throws \Exception
+     */
     public function getPage(int $page = 1): array
     {
         $sql = <<<SQL
@@ -58,7 +72,13 @@ SQL;
         );
     }
 
-    public function getOrganisationReviews($organisationId)
+    /**
+     * Выбирает все данные отзывов относящиеся к конкретной организации
+     * @param int $organisationId
+     * @return array<array>
+     * @throws \Exception
+     */
+    public function getOrganisationReviews(int $organisationId): array
     {
         $sql = <<<SQL
 SELECT
@@ -85,7 +105,13 @@ SQL;
         return $query;
     }
 
-    public function getOrganisationInfo($organisationId)
+    /**
+     * Выбирает всю информацию о конкретной организации
+     * @param int $organisationId
+     * @return array<array>
+     * @throws \Exception
+     */
+    public function getOrganisationInfo(int $organisationId): array
     {
         $data = $this->query("SELECT * FROM `organisations` WHERE `id`=$organisationId");
         $arr = [];
@@ -95,7 +121,12 @@ SQL;
         return $arr;
     }
 
-    public function organisationColumnComments()
+    /**
+     * Выбирает комментарии к таблице БД
+     * @return array<array>
+     * @throws \Exception
+     */
+    public function organisationColumnComments(): array
     {
         $data = $this->query("SHOW FULL COLUMNS FROM `organisations`");
         $arr = [];

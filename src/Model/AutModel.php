@@ -6,9 +6,13 @@ namespace App\Model;
 
 use W1020\Table as ORMTable;
 
+/**
+ * Отвечает за обращение к таблицам "user" и "user_groups"
+ */
 class AutModel extends ORMTable
 {
     /**
+     * Выбирает все данные о зарегистрированном пользователе и сравнивает их с данными из формы авторизации
      * @param string $login
      * @param string $pass
      * @return array<array>
@@ -44,6 +48,7 @@ SQL;
     }
 
     /**
+     * Считает количество пользователей с веденным логином
      * @param string $login
      * @return bool
      * @throws \Exception
@@ -54,6 +59,7 @@ SQL;
     }
 
     /**
+     * Добавляет нового пользователя в таблицу БД
      * @throws \Exception
      */
     public function addNewUser(string $login, string $pass, string $name): void

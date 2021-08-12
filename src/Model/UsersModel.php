@@ -5,9 +5,13 @@ namespace App\Model;
 
 use W1020\Table as ORMTable;
 
+/**
+ * Отвечает за обращение к таблицам "users" и "user_groups"
+ */
 class UsersModel extends ORMTable
 {
     /**
+     * Выбирает все данные о пользователях
      * @param int $page
      * @return array<array>
      * @throws \Exception
@@ -33,7 +37,12 @@ SQL;
         );
     }
 
-    public function getGroupList()
+    /**
+     * Выбирает все группы пользователей
+     * @return array<array>
+     * @throws \Exception
+     */
+    public function getGroupList(): array
     {
         $data = $this->query("SELECT `id`,`name` FROM `user_groups`");
         $arr = [];
