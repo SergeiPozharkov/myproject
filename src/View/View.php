@@ -21,6 +21,7 @@ class View
     }
 
     /**
+     * Возвращает данные для отображения
      * @param array<mixed> $data
      * @return $this
      */
@@ -40,11 +41,17 @@ class View
         return $this;
     }
 
+    /**
+     * Подключает шаблон по умолчанию
+     */
     public function view(): void
     {
         include __DIR__ . "/../../templates/main.php";
     }
 
+    /**
+     * Динамически подключает шаблон
+     */
     public function body(): void
     {
         include __DIR__ . "/../../templates/$this->template.php";
