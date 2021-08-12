@@ -63,7 +63,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 }
 
 #reviews {
-    margin-top: 80px;
+    margin-top: 150px;
+}
+
+#right_grid {
+    margin-right: 250px
 }
 
 #main {

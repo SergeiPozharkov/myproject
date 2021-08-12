@@ -4,6 +4,6 @@ return [
     "username" => "root",
     "password" => "root",
     "dbname" => "reviews_db",
-    "page_size" => 5,
+    "page_size" => 4,
     "salt" => "kjsksdjt5859fdjkdfdfj"
 ];

@@ -27,7 +27,7 @@
                 ?>
             </div>
         </div>
-        <div class="col">
+        <div class="col" id="right_grid">
         </div>
     </div>
 </div>
