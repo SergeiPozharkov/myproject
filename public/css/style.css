@@ -22,6 +22,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     align-items: flex-start;
 }
 
+.working_hours {
+    display: flex;
+    flex-direction: row;
+}
+
+#working_hours {
+    width: 42px !important;
+}
+
+#working_hours_item {
+    display: flex;
+    flex-direction: row;
+}
+
 .flex_item > a {
     color: white;
     margin-right: 100px;
@@ -88,6 +102,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 #rotate_logo {
     margin-right: 1000px;
+}
+
+#select {
+    padding: 0;
+    height: 35px !important;
+    width: 80px !important;
 }
 
 html, body {
