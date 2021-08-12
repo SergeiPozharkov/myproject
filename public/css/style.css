@@ -5,6 +5,10 @@ Distributor: http://bootstraptema.ru/
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
+.header-nav {
+    padding-top: 0 !important;
+}
+
 .banner {
     width: auto !important;
     height: auto !important;
@@ -41,7 +45,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
     margin: auto;
     position: absolute;
-    top: 380px;
+    top: 360px;
     left: 0;
     bottom: 0;
     right: 0;
