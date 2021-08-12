@@ -33,11 +33,38 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     margin-top: 200px;
 }
 
-#button {
-    width: 70px;
-    vertical-align: middle;
-    margin: 0 auto;
-    align-items: center;
+#reg_form {
+    margin-top: 200px;
+}
+
+#button_login {
+    /*display: flex;*/
+    /*justify-content: center;*/
+    margin: auto;
+    position: absolute;
+    top: 380px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 210px;
+    /*vertical-align: middle;*/
+    /*margin: 0 auto;*/
+    /*align-items: center;*/
+}
+
+#button_reg {
+    /*display: flex;*/
+    /*justify-content: center;*/
+    margin: auto;
+    position: absolute;
+    top: 450px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 210px;
+    /*vertical-align: middle;*/
+    /*margin: 0 auto;*/
+    /*align-items: center;*/
 }
 
 #form_title {
