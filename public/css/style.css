@@ -66,10 +66,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     margin-top: 80px;
 }
 
-/*.flex_item > a::selection {*/
-/*    color: #ff9036;*/
-/*text-decoration: none;*/
-/*}*/
+#main {
+    width: 400px;
+    height: auto;
+    margin: auto;
+    position: absolute;
+    top: 465px;
+    left: 0;
+    bottom: 0;
+    right: 400px;
+    transform: rotate(-15deg);
+}
+
 #rotate_logo {
     margin-right: 1000px;
 }
