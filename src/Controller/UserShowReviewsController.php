@@ -97,12 +97,13 @@ class UserShowReviewsController extends ReviewsController
         $this
             ->view
             ->addData([
-                "organisationInfo" => $this->model->getOrganisationInfo($_GET['id']),
+                "organisationInfo" => $this->model->getOrganisationInfo($_GET['orgid']),
                 "review" => $this->model->getRow($_GET['id']),
-                "organisationComments" => $this->model->getOrganisationReviews($_GET['id']),
+                "organisationComments" => $this->model->getOrganisationReviews($_GET['orgid']),
                 "columnComments" => $this->model->columnComments(),
                 "organisationColumnComments" => $this->model->organisationColumnComments()
             ])
             ->setTemplate("UserShowReviews/reviews");
+//        exit();
     }
 }
