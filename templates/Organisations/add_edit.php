@@ -20,16 +20,18 @@
                             echo "<input class='form-control' name='$field' value='" . ($this->data['row'][$field] ?? "") . "'><br>";
                         } elseif ($field == "working_hours" && empty($this->data['row'][$field])) {
                             echo $value . " * <br>";
-                            echo "<span>Дни недели:</span>" . $select = <<<SELECT
-<select name="week_days">
+                            echo "<div class='working_hours'><div><span>Дни:</span>" . $select = <<<SELECT
+<select name="week_days" id="select">
+  <option value="" style="display:none;"></option>
   <option value="Пн.-Вс.:">Пн.-Вс.:</option>
   <option value="Пн.-Пт.:">Пн.-Пт.:</option>
   <option value="Пн.-Сб.:">Пн.-Сб.:</option>
 </select>
 SELECT;
-                            echo "<br> <span>С:</span><input id='working_hours' type='number' name='start_hours'>:<input id='working_hours' type='number' name='start_minutes'><br>";
-                            echo " <span>По:</span><input id='working_hours' type='number' name='end_hours'>:<input id='working_hours' type='number' name='end_minutes'><br>";
-
+                            echo "</div><div><span>С:</span><input id='working_hours' type='number' name='start_hours'>:
+<input id='working_hours' type='number' name='start_minutes'></div>";
+                            echo " <div><span>По:</span><input id='working_hours' type='number' name='end_hours'>:
+ <input id='working_hours' type='number' name='end_minutes'></div></div><br>";
                         } elseif ($field == "working_hours" && !empty($this->data['row'][$field])) {
                             echo $value . " * <br>";
                             echo "<input type='text' class='form-control' name='$field' value='" . ($this->data['row'][$field] ?? "") . "'><br>";
@@ -39,7 +41,7 @@ SELECT;
                         }
                     }
                     ?>
-                    <input type="submit" value="ok" class="btn btn-success">
+                    <input type="submit" value="Добавить" class="btn btn-success">
                 </form>
             </div>
         </div>
