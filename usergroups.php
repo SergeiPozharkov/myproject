@@ -11,9 +11,11 @@ return [
     "user" => [
         "AutController",
         "MainController",
-        "UserShowReviewsController",
-        "UserShowAddOrganisationController",
-        "UserShowAddReviewController"
+//        "UserShowReviewsController",
+//        "UserShowAddOrganisationController",
+//        "UserShowAddReviewController",
+        "UserReviewsController",
+        "UserOrganisationsController"
     ],
     "guest" => [
         "AutController",

@@ -15,14 +15,17 @@
                         href="?">Главная</a></div>
 
             <div class="flex_item"><a
-                        class="hvr-overline-from-left button2<?= $this->data['controllerName'] == "UserShowReviewsController" ? " active" : "" ?>"
-                        href="?type=UserShowReviews&action=show">Отзывы</a></div>
+                        class="hvr-overline-from-left button2<?= $this->data['controllerName'] == "UserReviewsController" ? " active" : "" ?>"
+                        href="?type=UserReviews&action=show">Отзывы</a></div>
             <div class="flex_item"><a
-                        class="hvr-overline-from-left button2<?= $this->data['controllerName'] == "UserShowAddOrganisationController" ? " active" : "" ?>"
-                        href="?type=UserShowAddOrganisation&action=showadd">Добавить организацию</a></div>
+                        class="hvr-overline-from-left button2<?= $this->data['controllerName'] == "UserOrganisationsController" ? " active" : "" ?>"
+                        href="?type=UserOrganisations&action=show">Организации</a></div>
             <div class="flex_item"><a
-                        class="hvr-overline-from-left button2<?= $this->data['controllerName'] == "UserShowAddReviewController" ? " active" : "" ?>"
-                        href="?type=UserShowAddReview&action=showadd">Добавить отзыв</a></div>
+                        class="hvr-overline-from-left button2<?= $this->data['controllerName'] == "UserOrganisationsController" ? " active" : "" ?>"
+                        href="?type=UserOrganisations&action=showadd">Добавить организацию</a></div>
+            <div class="flex_item"><a
+                        class="hvr-overline-from-left button2<?= $this->data['controllerName'] == "UserReviewsController" ? " active" : "" ?>"
+                        href="?type=UserReviews&action=showadd">Добавить отзыв</a></div>
             <div class="flex_item"><a
                         class="hvr-overline-from-left button2"
                         href="?type=Aut&action=logout">Выйти(<?= isset($_SESSION['user']['code']) ? $_SESSION['user']['name'] . ')' : "" ?>
