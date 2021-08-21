@@ -8,7 +8,7 @@ echo (new Table())
     ->setHeaders($this->data["comments"])
     ->addColumn(fn($row) => "<a href='?type={$this->data['controllerName']}&action=del&id=$row[id]'>❌</a>")
     ->addColumn(fn($row) => "<a href='?type={$this->data['controllerName']}&action=showedit&id=$row[id]'>✏</a>")
-    ->setClass("table table-striped table-hover")
+    ->setClass("table table-dark table-borderless")
     ->html();
 echo (new Pagination())
     ->setUrlPrefix("?type={$this->data['controllerName']}&action=show&page=")

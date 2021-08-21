@@ -1,5 +1,5 @@
 <?php
-print_r($this->data);
+//print_r($this->data);
 
 use W1020\HTML\Select; ?>
 <div class="container">
