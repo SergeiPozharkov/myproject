@@ -22,8 +22,8 @@ class UsersModel extends ORMTable
 SELECT
     `users`.`id`,
     `users`.`login`,
-    `users`.`pass`,
     `users`.`name`,
+    `users`.`pass`,
     `user_groups`.`name` AS 'user_groups_id'
 FROM
     `users`,

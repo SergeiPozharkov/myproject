@@ -5,6 +5,14 @@ Distributor: http://bootstraptema.ru/
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
+.show_review {
+    width: 100%;
+    height: 100%;
+    background-image: none !important;
+    background-color: silver !important;
+
+}
+
 .header-nav {
     padding-top: 0 !important;
 }

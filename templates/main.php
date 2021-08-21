@@ -106,11 +106,10 @@
                     $this->body();
                     ?>
                 </div>
-                <div class="clearfix"></div>
+                <div class="clearfix">
+                </div>
         </div>
     </div>
-
-
     <!-- //footer -->
     <script type="text/javascript" src="/public/js/bootstrap-3.1.1.min.js"></script>
     <!-- smooth scrolling -->

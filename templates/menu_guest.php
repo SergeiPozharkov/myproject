@@ -14,8 +14,11 @@
                         href="?">Главная</a></div>
 
             <div class="flex_item"><a
-                        class="hvr-overline-from-left button2<?= $this->data['controllerName'] == "GuestShowReviewsController" ? " active" : "" ?>"
-                        href="?type=GuestShowReviews&action=show">Отзывы</a></div>
+                        class="hvr-overline-from-left button2<?= $this->data['controllerName'] == "GuestReviewsController" ? " active" : "" ?>"
+                        href="?type=GuestReviews&action=show">Отзывы</a></div>
+            <div class="flex_item"><a
+                        class="hvr-overline-from-left button2<?= $this->data['controllerName'] == "GuestOrganisationsController" ? " active" : "" ?>"
+                        href="?type=GuestOrganisations&action=show">Организации</a></div>
             <div class="flex_item"><a
                         class="hvr-overline-from-left button2<?= $this->data['controllerName'] == "AutController" ? " active" : "" ?>"
                         href="?type=Aut&action=show">Войти</a></div>
