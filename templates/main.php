@@ -49,7 +49,7 @@
     <!-- start-smoth-scrolling -->
 
 </head>
-<body>
+<body class="main_template" style="background-color: silver">
 <!--banner-->
 <div class="banner">
     <div class="container">
@@ -90,26 +90,25 @@
                     });
                 </script>
                 <div id="top" class="callbacks_container">
-
-                    <?php
-                    if (!empty($_SESSION['warnings'])) {
-                        foreach ($_SESSION['warnings'] as $warning) {
-                            echo "<div class='alert alert-warning' role='alert'>$warning</div>";
-                        }
-                        $_SESSION['warnings'] = [];
-                    }
-                    ?>
-                    <?php
-                    /**
-                     * @var $this App\View\View
-                     */
-                    $this->body();
-                    ?>
                 </div>
                 <div class="clearfix">
                 </div>
         </div>
     </div>
+    <?php
+    if (!empty($_SESSION['warnings'])) {
+        foreach ($_SESSION['warnings'] as $warning) {
+            echo "<div class='alert alert-warning' role='alert'>$warning</div>";
+        }
+        $_SESSION['warnings'] = [];
+    }
+    ?>
+    <?php
+    /**
+     * @var $this App\View\View
+     */
+    $this->body();
+    ?>
     <!-- //footer -->
     <script type="text/javascript" src="/public/js/bootstrap-3.1.1.min.js"></script>
     <!-- smooth scrolling -->
