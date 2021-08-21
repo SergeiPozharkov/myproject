@@ -11,9 +11,6 @@ return [
     "user" => [
         "AutController",
         "MainController",
-//        "UserShowReviewsController",
-//        "UserShowAddOrganisationController",
-//        "UserShowAddReviewController",
         "UserReviewsController",
         "UserOrganisationsController"
     ],
