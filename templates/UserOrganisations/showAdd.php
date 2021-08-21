@@ -28,8 +28,10 @@
   <option value="Пн.-Сб.:">Пн.-Сб.:</option>
 </select>
 SELECT;
-                            echo "</div><div><span>С:</span><input id='working_hours' type='number' name='start_hours'>:<input id='working_hours' type='number' name='start_minutes'></div>";
-                            echo " <div><span>По:</span><input id='working_hours' type='number' name='end_hours'>:<input id='working_hours' type='number' name='end_minutes'></div></div><br>";
+                            echo "</div><div><span>С:</span><input id='working_hours' type='number' name='start_hours'>:
+<input id='working_hours' type='number' name='start_minutes'></div>";
+                            echo " <div><span>По:</span><input id='working_hours' type='number' name='end_hours'>:
+ <input id='working_hours' type='number' name='end_minutes'></div></div><br>";
 
                         } else {
                             echo $value . " * <br>";
@@ -37,7 +39,7 @@ SELECT;
                         }
                     }
                     ?>
-                    <input type="submit" value="Добавить" class="btn btn-primary">
+                    <input type="submit" value="Добавить" class="btn btn-success">
                 </form>
             </div>
         </div>

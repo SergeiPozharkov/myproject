@@ -9,5 +9,5 @@
     <?= $this->data['columnComments']['users_id'] ?>:<br><span><?= $this->data['comments']['users_id'] ?></span><br>
     <?= $this->data['columnComments']['review'] ?>:<br>
     <p><?= $this->data['review']['review'] ?></p>
-    <a href="?type=GuestReviews&action=show" class='btn btn-primary'>Назад</a>
+    <a href="?type=GuestReviews&action=show" class='btn btn-warning'>Назад</a>
 </div>

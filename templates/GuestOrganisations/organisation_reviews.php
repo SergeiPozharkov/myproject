@@ -40,7 +40,7 @@
                     <?= $this->data['reviewsColumnComments']['review'] ?>:<br>
                     <p><?= $row['review'] ?></p>
                 <?php endforeach; ?>
-                <a href="?type=GuestOrganisations&action=show" class='btn btn-primary'>Назад</a>
+                <a href="?type=GuestOrganisations&action=show" class='btn btn-warning'>Назад</a>
             </div>
         </div>
         <div class="col">

@@ -9,5 +9,5 @@
         echo "<input name='$field' value='" . ($this->data['row'][$field] ?? "") . "'><br>";
     }
     ?>
-    <input type="submit" value="ok" class="btn btn-primary">
+    <input type="submit" value="ok" class="btn btn-success">
 </form>

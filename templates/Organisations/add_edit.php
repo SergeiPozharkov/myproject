@@ -39,7 +39,7 @@ SELECT;
                         }
                     }
                     ?>
-                    <input type="submit" value="ok" class="btn btn-primary">
+                    <input type="submit" value="ok" class="btn btn-success">
                 </form>
             </div>
         </div>

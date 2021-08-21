@@ -24,15 +24,26 @@
     <?php endforeach; ?>
 </div>
 <hr>
-<div class="show_review">
-    <?php foreach ($this->data['organisationComments'] as $row): ?>
-        <h1><?= $row['title'] ?></h1>
-        <?= $this->data['reviewsColumnComments']['organisations_id'] ?>:<br>
-        <span><?= $row['organisations_name'] ?></span><br>
-        <?= $this->data['reviewsColumnComments']['date'] ?>:<br><span><?= $row['date'] ?></span><br>
-        <?= $this->data['reviewsColumnComments']['users_id'] ?>:<br><span><?= $row['users_name'] ?></span><br>
-        <?= $this->data['reviewsColumnComments']['review'] ?>:<br>
-        <p><?= $row['review'] ?></p>
-    <?php endforeach; ?>
-    <a href="?type=UserOrganisations&action=show" class='btn btn-primary'>Назад</a>
+<div class="container">
+    <div class="row">
+        <div class="col">
+        </div>
+        <div class="col">
+            <div class="show_review">
+                <?php foreach ($this->data['organisationComments'] as $row): ?>
+                    <h1><?= $row['title'] ?></h1>
+                    <?= $this->data['reviewsColumnComments']['organisations_id'] ?>:<br>
+                    <span><?= $row['organisations_name'] ?></span><br>
+                    <?= $this->data['reviewsColumnComments']['date'] ?>:<br><span><?= $row['date'] ?></span><br>
+                    <?= $this->data['reviewsColumnComments']['users_id'] ?>:<br><span><?= $row['users_name'] ?></span>
+                    <br>
+                    <?= $this->data['reviewsColumnComments']['review'] ?>:<br>
+                    <p><?= $row['review'] ?></p>
+                <?php endforeach; ?>
+                <a href="?type=UserOrganisations&action=show" class='btn btn-warning'>Назад</a>
+            </div>
+        </div>
+        <div class="col">
+        </div>
+    </div>
 </div>

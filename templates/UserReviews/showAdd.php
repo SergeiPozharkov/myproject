@@ -29,7 +29,7 @@ use W1020\HTML\Select; ?>
                 }
 
                 ?>
-                <input type="submit" value="Добавить" class="btn btn-primary">
+                <input type="submit" value="Добавить" class="btn btn-success">
             </form>
         </div>
         <div class="col">

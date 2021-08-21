@@ -35,5 +35,5 @@ use W1020\HTML\Select; ?>
     }
 
     ?>
-    <input type="submit" value="ok" class="btn btn-primary">
+    <input type="submit" value="ok" class="btn btn-success">
 </form>
