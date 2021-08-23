@@ -1,7 +1,9 @@
 <?php
 //print_r($this->data);
 ?>
-
+<div id="main">
+    <h1 id="form_title">Форма для добавления новой организации:</h1>
+</div>
 <div class="container">
     <div class="row">
         <div class="col">
@@ -30,8 +32,8 @@
 SELECT;
                             echo "</div><div><span>С:</span><input id='working_hours' type='number' name='start_hours'>:
 <input id='working_hours' type='number' name='start_minutes'></div>";
-                            echo " <div><span>По:</span><input id='working_hours' type='number' name='end_hours'>:
- <input id='working_hours' type='number' name='end_minutes'></div></div><br>";
+                            echo "<div><span>По:</span><input id='working_hours' type='number' name='end_hours'>:
+<input id='working_hours' type='number' name='end_minutes'></div></div><br>";
 
                         } else {
                             echo $value . " * <br>";

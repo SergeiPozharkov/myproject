@@ -5,6 +5,9 @@ use W1020\HTML\Table;
 
 //print_r($this->data);
 ?>
+<div id="main">
+    <h1 id="form_title">Список отзывов:</h1>
+</div>
 <div class="container">
     <div class="row">
         <div class="col">

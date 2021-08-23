@@ -1,7 +1,9 @@
 <?php
 //print_r($this->data);
-
-use W1020\HTML\Select; ?>
+?>
+<div id="main">
+    <h1 id="form_title">Форма для добавления отзыва:</h1>
+</div>
 <div class="container">
     <div class="row">
         <div class="col">
@@ -12,11 +14,12 @@ use W1020\HTML\Select; ?>
                 foreach ($this->data["comments"] as $field => $value) {
                     if ($field == "organisations_id") {
                         echo $value . "<br>";
-                        echo (new Select())
-                                ->setName($field)
-                                ->setData($this->data["organisationsList"])
-                                ->setSelected($this->data["row"]['organisations_id'] ?? "")
-                                ->html() . '<br>';
+                        echo "<select id='select_add_review' name='$field'>";
+                        foreach ($this->data["organisationsList"] as $value => $text) {
+                            echo "<option value='$value' " . (($this->data["row"]['organisations_id'] ?? "" == $value) ?
+                                    "selected" : "") . ">$text</option>";
+                        }
+                        echo "</select><br>";
                     } elseif ($field == "review") {
                         echo $value . "<br>";
                         echo "<textarea id='review_text' name='$field'></textarea><br>";

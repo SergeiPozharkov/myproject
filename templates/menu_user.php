@@ -1,11 +1,3 @@
-<!------->
-<div id="rotate_logo">
-    <h1>
-        <a class="navbar-brand link link--yaku" id="rotate_letter"
-           href="?"><span>V</span><span>O</span><span>D</span><span>G</span><span>U</span><span>K</span></a>
-    </h1>
-</div>
-</div>
 <!-- Collect the nav links, forms, and other content for toggling -->
 <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
     <nav class="cl-effect-1">

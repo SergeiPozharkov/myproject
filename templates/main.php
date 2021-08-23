@@ -64,76 +64,82 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
+                    <div id="rotate_logo">
+                        <h1>
+                            <a class="navbar-brand link link--yaku" id="rotate_letter"
+                               href="?"><span>V</span><span>O</span><span>D</span><span>G</span><span>U</span><span>K</span></a>
+                        </h1>
+                    </div>
+                </div>
+                <?php
 
-                    <?php
-
-                    include "menu_" . ($_SESSION['user']['code'] ?? 'guest') . ".php";
-                    ?>
-                </div>
-                <script>
-                    // You can also use "$(window).load(function() {"
-                    $(function () {
-                        // Slideshow 4
-                        $("#slider3").responsiveSlides({
-                            auto: true,
-                            pager: false,
-                            nav: false,
-                            speed: 500,
-                            namespace: "callbacks",
-                            before: function () {
-                                $('.events').append("<li>before event fired.</li>");
-                            },
-                            after: function () {
-                                $('.events').append("<li>after event fired.</li>");
-                            }
-                        });
-                    });
-                </script>
-                <div id="top" class="callbacks_container">
-                </div>
-                <div class="clearfix">
-                </div>
+                include "menu_" . ($_SESSION['user']['code'] ?? 'guest') . ".php";
+                ?>
+        </div>
+        <script>
+            // You can also use "$(window).load(function() {"
+            $(function () {
+                // Slideshow 4
+                $("#slider3").responsiveSlides({
+                    auto: true,
+                    pager: false,
+                    nav: false,
+                    speed: 500,
+                    namespace: "callbacks",
+                    before: function () {
+                        $('.events').append("<li>before event fired.</li>");
+                    },
+                    after: function () {
+                        $('.events').append("<li>after event fired.</li>");
+                    }
+                });
+            });
+        </script>
+        <div id="top" class="callbacks_container">
+        </div>
+        <div class="clearfix">
         </div>
     </div>
-    <?php
-    if (!empty($_SESSION['warnings'])) {
-        foreach ($_SESSION['warnings'] as $warning) {
-            echo "<div class='alert alert-warning' role='alert'>$warning</div>";
-        }
-        $_SESSION['warnings'] = [];
+</div>
+<?php
+if (!empty($_SESSION['warnings'])) {
+    foreach ($_SESSION['warnings'] as $warning) {
+        echo "<div class='alert alert-warning' role='alert'>$warning</div>";
     }
-    ?>
-    <?php
-    /**
-     * @var $this App\View\View
-     */
-    $this->body();
-    ?>
-    <!-- //footer -->
-    <script type="text/javascript" src="/public/js/bootstrap-3.1.1.min.js"></script>
-    <!-- smooth scrolling -->
-    <script type="text/javascript">
-        $(document).ready(function () {
-            /*
-                var defaults = {
-                containerID: 'toTop', // fading element id
-                containerHoverID: 'toTopHover', // fading element hover id
-                scrollSpeed: 1200,
-                easingType: 'linear'
-                };
-            */
-            $().UItoTop({easingType: 'easeOutQuart'});
-        });
-    </script>
-    <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
-    <!-- //smooth scrolling -->
+    $_SESSION['warnings'] = [];
+}
+?>
+<?php
+/**
+ * @var $this App\View\View
+ */
+$this->body();
+?>
+<!-- //footer -->
+<script type="text/javascript" src="/public/js/bootstrap-3.1.1.min.js"></script>
+<!-- smooth scrolling -->
+<script type="text/javascript">
+    $(document).ready(function () {
+        /*
+            var defaults = {
+            containerID: 'toTop', // fading element id
+            containerHoverID: 'toTopHover', // fading element hover id
+            scrollSpeed: 1200,
+            easingType: 'linear'
+            };
+        */
+        $().UItoTop({easingType: 'easeOutQuart'});
+    });
+</script>
+<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+<!-- //smooth scrolling -->
 
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-            integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-            crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-            integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-            crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
 </body>
 </html>
