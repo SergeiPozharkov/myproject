@@ -1,7 +1,9 @@
 <?php
 //print_r($this->data);
-
 ?>
+<div id="main">
+    <h1 id="form_title">Полная информация о организации и список отзывов:</h1>
+</div>
 <div class="organisation_info">
     <?php foreach ($this->data['organisationInfo'] as $row): ?>
         <h1><?= $row['name'] ?></h1>
