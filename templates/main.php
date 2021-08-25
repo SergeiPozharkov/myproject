@@ -72,7 +72,6 @@
                     </div>
                 </div>
                 <?php
-
                 include "menu_" . ($_SESSION['user']['code'] ?? 'guest') . ".php";
                 ?>
         </div>
@@ -115,6 +114,16 @@ if (!empty($_SESSION['warnings'])) {
  */
 $this->body();
 ?>
+<footer>
+    <section>email:pozharkov.sergej@gmail.com, tel:+375-29-374-82-72</section>
+    <section>
+        <a href="https://github.com/SergeiPozharkov" id="link">GITHUB</a>
+        <a href="https://www.linkedin.com/in/sergey-pozharkov-131705208/" id="link">LINKEDIN</a>
+    </section>
+    <section>
+        &copy; Pozharkov Sergey 2021
+    </section>
+</footer>
 <!-- //footer -->
 <script type="text/javascript" src="/public/js/bootstrap-3.1.1.min.js"></script>
 <!-- smooth scrolling -->
