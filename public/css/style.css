@@ -17,10 +17,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     bottom: 150px;
 }
 
-.admin_standard_show {
+.admin_show_user_groups {
     position: absolute;
     bottom: 250px;
     margin: 0 auto;
+}
+
+.admin_show_user {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    margin: -100px 0 0 -150px;
 }
 
 .page-link {

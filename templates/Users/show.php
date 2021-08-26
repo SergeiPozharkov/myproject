@@ -3,13 +3,14 @@
 use W1020\HTML\Pagination;
 use W1020\HTML\Table;
 
+//print_r($this->data);
 ?>
 <div class="container">
     <div class="row">
         <div class="col">
         </div>
         <div class="col">
-            <div class="admin_show_user_groups">
+            <div class="admin_show_user">
                 <?php
                 echo (new Table())
                     ->setData($this->data["table"])
@@ -25,7 +26,8 @@ use W1020\HTML\Table;
                     ->html();
                 ?>
 
-                <a href="?type=<?= $this->data['controllerName'] ?>&action=showadd" class="btn btn-warning">Добавить</a>
+                <a href="?type=<?= $this->data['controllerName'] ?>&action=showadd"
+                   class="btn btn-warning">Добавить</a>
             </div>
         </div>
         <div class="col">
