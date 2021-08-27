@@ -1,7 +1,9 @@
 <?php
 //print_r($this->data);
 ?>
-
+<div id="main">
+    <h1 id="form_title">Форма добавления/редактирования организации:</h1>
+</div>
 <div class="container">
     <div class="row">
         <div class="col">
@@ -10,7 +12,6 @@
             <div class="container">
                 <form action="<?= $this->data['action'] ?>" method="post">
                     <?php
-
                     foreach ($this->data["comments"] as $field => $value) {
                         if ($field == "description") {
                             echo $value . "<br>";
@@ -41,7 +42,7 @@ SELECT;
                         }
                     }
                     ?>
-                    <input type="submit" value="Добавить" class="btn btn-success">
+                    <input type="submit" value="Ок" class="btn btn-success">
                 </form>
             </div>
         </div>

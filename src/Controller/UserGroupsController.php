@@ -9,4 +9,16 @@ namespace App\Controller;
 class UserGroupsController extends Table
 {
     protected string $tableName = "user_groups";
+
+    public function actionShowEdit(): void
+    {
+        parent::actionShowEdit();
+        $this->view->setTemplate("UserGroups/add_edit");
+    }
+
+    public function actionShowAdd(): void
+    {
+        parent::actionShowAdd();
+        $this->view->setTemplate("UserGroups/add_edit");
+    }
 }
