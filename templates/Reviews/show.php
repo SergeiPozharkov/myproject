@@ -20,5 +20,6 @@ use W1020\HTML\Table;
         ->html();
     ?>
 
-    <a href="?type=<?= $this->data['controllerName'] ?>&action=showadd" class="btn btn-warning" id="button_color">Добавить</a>
+    <a href="?type=<?= $this->data['controllerName'] ?>&action=showadd" class="btn btn-warning"
+       id="button_color">Добавить</a>
 </div>

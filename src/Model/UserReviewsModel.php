@@ -13,9 +13,28 @@ class UserReviewsModel extends ReviewsModel
      * @param int|string $organisationsId
      * @param int|string $usersId
      */
-    public function addReview(string $title, string $review, string $date, int|string $organisationsId, int|string $usersId): void
+    public function addReview(
+        string     $title,
+        string     $review,
+        string     $date,
+        int|string $organisationsId,
+        int|string $usersId
+    ): void
     {
-        $sql = "INSERT INTO `reviews`(`title`, `review`, `date`, `organisations_id`, `users_id`) VALUES ('$title','$review','$date',$organisationsId,$usersId)";
+        $sql = "INSERT INTO `reviews`(
+                      `title`,
+                      `review`,
+                      `date`,
+                      `organisations_id`,
+                      `users_id`
+                      ) 
+                      VALUES (
+                              '$title',
+                              '$review',
+                              '$date',
+                              $organisationsId,
+                              $usersId
+                              )";
         $this->runSQL($sql);
 
     }
@@ -42,7 +61,8 @@ FROM
     `users`,
     `organisations`
 WHERE
-    `reviews`.`organisations_id` = `organisations`.`id` AND `reviews`.`users_id` = `users`.`id` AND `reviews`.`id` = $reviewId
+    `reviews`.`organisations_id` = `organisations`.`id` AND `reviews`.`users_id` = `users`.`id` AND 
+    `reviews`.`id` = $reviewId
 SQL;
 
         $data = $this->query($sql);
@@ -105,7 +125,8 @@ FROM
     `users`,
     `organisations`
 WHERE
-    `reviews`.`organisations_id` = `organisations`.`id` AND `reviews`.`users_id` = `users`.`id` AND `organisations`.`id` = $organisationId
+    `reviews`.`organisations_id` = `organisations`.`id` AND `reviews`.`users_id` = `users`.`id` AND 
+    `organisations`.`id` = $organisationId
 SQL;
 
         $data = $this->query($sql);

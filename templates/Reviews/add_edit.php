@@ -1,6 +1,3 @@
-<?php
-//print_r($this->data);
-?>
 <div id="main">
     <h1 id="form_title">Форма добавления/редактирования отзыва:</h1>
 </div>
@@ -29,13 +26,16 @@
                         }
                         echo "</select><br>";
                     } elseif ($field == "date") {
-                        echo "<input type='hidden' name='$field' value='" . ($this->data['row'][$field] ?? date('Y-m-d H:i:s')) . "'>";
+                        echo "<input type='hidden' name='$field' value='" . ($this->data['row'][$field] ??
+                                date('Y-m-d H:i:s')) . "'>";
                     } elseif ($field == "review") {
                         echo $value . "<br>";
-                        echo "<textarea id='review_text' name='$field'>" . ($this->data['row'][$field] ?? "") . "</textarea><br>";
+                        echo "<textarea id='review_text' name='$field'>" . ($this->data['row'][$field] ??
+                                "") . "</textarea><br>";
                     } elseif ($field == "title") {
                         echo $value . "<br>";
-                        echo "<input id='review_title' name='$field' value='" . ($this->data['row'][$field] ?? "") . "'><br>";
+                        echo "<input id='review_title' name='$field' value='" . ($this->data['row'][$field] ??
+                                "") . "'><br>";
                     } else {
                         echo $value . "<br>";
                         echo "<input name='$field' value='" . ($this->data['row'][$field] ?? "") . "'><br>";

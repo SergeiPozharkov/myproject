@@ -1,6 +1,3 @@
-<?php
-//print_r($this->data);
-?>
 <div id="main">
     <h1 id="form_title">Форма для добавления новой организации:</h1>
 </div>
@@ -35,6 +32,9 @@ SELECT;
                             echo "<div><span>По:</span><input id='working_hours' type='number' name='end_hours'>:
 <input id='working_hours' type='number' name='end_minutes'></div></div><br>";
 
+                        } elseif ($field == "phone") {
+                            echo $value . " * <br>";
+                            echo "<input class='form-control' placeholder='формата:+375292223344' name='$field'><br>";
                         } else {
                             echo $value . " * <br>";
                             echo "<input class='form-control' name='$field'><br>";

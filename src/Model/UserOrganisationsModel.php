@@ -42,7 +42,8 @@ FROM
     `users`,
     `organisations`
 WHERE
-    `reviews`.`organisations_id` = `organisations`.`id` AND `reviews`.`users_id` = `users`.`id` AND `organisations`.`id` = $organisationId
+    `reviews`.`organisations_id` = `organisations`.`id` AND `reviews`.`users_id` = `users`.`id` AND 
+    `organisations`.`id` = $organisationId
 SQL;
 
         $data = $this->query($sql);

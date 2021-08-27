@@ -19,6 +19,5 @@ class MainController extends AbstractController
         $this
             ->view
             ->setTemplate("Main/index");
-//            ->view();
     }
 }

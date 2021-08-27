@@ -1,7 +1,3 @@
-<?php
-//print_r($this->data);
-?>
-
 <form action="<?= $this->data['action'] ?>" method="post">
     <?php
     foreach ($this->data["comments"] as $field => $value) {

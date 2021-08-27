@@ -13,7 +13,13 @@ class WorkingHours
      * @param string|int $endMinutes
      * @return bool
      */
-    public function workingHoursCheck(string $weekDays, string|int $startHours, string|int $startMinutes, string|int $endHours, string|int $endMinutes): bool
+    public function workingHoursCheck(
+        string     $weekDays,
+        string|int $startHours,
+        string|int $startMinutes,
+        string|int $endHours,
+        string|int $endMinutes
+    ): bool
     {
         if (is_string($weekDays) == true) {
             $result = true;

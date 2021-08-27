@@ -1,6 +1,3 @@
-<?php
-//print_r($this->data);
-?>
 <div id="main">
     <h1 id="form_title">Форма для добавления отзыва:</h1>
 </div>
@@ -32,7 +29,7 @@
                 }
 
                 ?>
-                <input type="submit" value="Добавить" class="btn btn-success" id="button_color">
+                <input type="submit" value="Добавить" class="btn btn-success">
             </form>
         </div>
         <div class="col">

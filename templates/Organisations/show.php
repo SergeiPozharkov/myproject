@@ -1,11 +1,4 @@
-<?php
-
-use W1020\HTML\Pagination;
-use W1020\HTML\Table;
-
-
-//print_r($this->data['table']);
-?>
+<?php use W1020\HTML\Pagination; ?>
 <div id="main">
     <h1 id="form_title">Список организаций:</h1>
 </div>

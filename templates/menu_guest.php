@@ -1,4 +1,3 @@
-<!-- Collect the nav links, forms, and other content for toggling -->
 <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
     <nav class="cl-effect-1">
         <div class="nav navbar-nav " id="flex">
@@ -21,5 +20,5 @@
             </div>
         </div>
     </nav>
-</div><!-- /navbar-collapse -->
+</div>
 </nav>

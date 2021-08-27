@@ -2,7 +2,6 @@
 
 use W1020\HTML\Pagination;
 
-//print_r($this->data);
 ?>
 <div id="main">
     <h1 id="form_title">Список организаций:</h1>

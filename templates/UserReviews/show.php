@@ -1,10 +1,4 @@
-<?php
-
-use W1020\HTML\Pagination;
-use W1020\HTML\Table;
-
-//print_r($this->data);
-?>
+<?php use W1020\HTML\Pagination; ?>
 <div id="main">
     <h1 id="form_title">Список отзывов:</h1>
 </div>

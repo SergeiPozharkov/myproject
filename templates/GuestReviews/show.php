@@ -1,10 +1,4 @@
-<?php
-
-use W1020\HTML\Pagination;
-use W1020\HTML\Table;
-
-//print_r($this->data);
-?>
+<?php use W1020\HTML\Pagination; ?>
 <div id="main">
     <h1 id="form_title">Список отзывов:</h1>
 </div>
@@ -19,7 +13,8 @@ use W1020\HTML\Table;
                 echo "<tr><td><b>$row[title]</b></tr></td>";
                 echo "<tr><td><b>$row[users_name]</b></td></tr>";
                 echo "<tr><td><b>$row[date]</b></td></tr>";
-                echo "<tr><td><a href='?type={$this->data['controllerName']}&action=showReview&id=$row[id]' class='btn btn-warning' id='button_color'>Подробнее</a></td></tr>";
+                echo "<tr><td><a href='?type={$this->data['controllerName']}&action=showReview&id=$row[id]' 
+class='btn btn-warning' id='button_color'>Подробнее</a></td></tr>";
             }
             echo "</table>";
             echo (new Pagination())

@@ -1,6 +1,3 @@
-<?php
-//print_r($this->data);
-?>
 <div id="main">
     <h1 id="form_title">Форма добавления/редактирования организации:</h1>
 </div>
@@ -15,10 +12,12 @@
                     foreach ($this->data["comments"] as $field => $value) {
                         if ($field == "description") {
                             echo $value . "<br>";
-                            echo "<textarea class='form-control' class='news_text' name='$field'>" . ($this->data['row'][$field] ?? "") . "</textarea><br>";
+                            echo "<textarea class='form-control' class='news_text' name='$field'>"
+                                . ($this->data['row'][$field] ?? "") . "</textarea><br>";
                         } elseif ($field == "social_networks") {
                             echo $value . "<br>";
-                            echo "<input class='form-control' name='$field' value='" . ($this->data['row'][$field] ?? "") . "'><br>";
+                            echo "<input class='form-control' name='$field' value='"
+                                . ($this->data['row'][$field] ?? "") . "'><br>";
                         } elseif ($field == "working_hours" && empty($this->data['row'][$field])) {
                             echo $value . " * <br>";
                             echo "<div class='working_hours'><div><span>Дни:</span>" . $select = <<<SELECT
@@ -35,10 +34,12 @@ SELECT;
  <input id='working_hours' type='number' name='end_minutes'></div></div><br>";
                         } elseif ($field == "working_hours" && !empty($this->data['row'][$field])) {
                             echo $value . " * <br>";
-                            echo "<input type='text' class='form-control' name='$field' value='" . ($this->data['row'][$field] ?? "") . "'><br>";
+                            echo "<input type='text' class='form-control' name='$field' value='"
+                                . ($this->data['row'][$field] ?? "") . "'><br>";
                         } else {
                             echo $value . " * <br>";
-                            echo "<input class='form-control' name='$field' value='" . ($this->data['row'][$field] ?? "") . "'><br>";
+                            echo "<input class='form-control' name='$field' value='"
+                                . ($this->data['row'][$field] ?? "") . "'><br>";
                         }
                     }
                     ?>

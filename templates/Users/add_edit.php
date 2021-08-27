@@ -1,6 +1,3 @@
-<?php
-//print_r($this->data);
-?>
 <div id="main">
     <h1 id="form_title">Форма добавления/редактирования пользователя:</h1>
 </div>
