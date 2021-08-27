@@ -6,6 +6,9 @@ use W1020\HTML\Table;
 
 //print_r($this->data['table']);
 ?>
+<div id="main">
+    <h1 id="form_title">Список организаций:</h1>
+</div>
 <div class="container">
     <div class="row">
         <div class="col">
@@ -32,7 +35,8 @@ use W1020\HTML\Table;
                 ->setActivePage($this->data["activePage"])
                 ->html();
             ?>
-            <a href="?type=<?= $this->data['controllerName'] ?>&action=showadd" class="btn btn-warning">Добавить</a>
+            <a href="?type=<?= $this->data['controllerName'] ?>&action=showadd" class="btn btn-warning"
+               id="button_color">Добавить</a>
         </div>
         <div class="col">
         </div>

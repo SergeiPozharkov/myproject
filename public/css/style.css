@@ -5,6 +5,10 @@ Distributor: http://bootstraptema.ru/
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
+#button_color {
+    background-color: rgb(255, 145, 55);
+}
+
 #select_add_review {
     padding: 0;
     height: auto;
@@ -31,7 +35,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 }
 
 .page-link {
-    background-color: orange !important;
+    background-color: rgb(255, 145, 55) !important;
 }
 
 .pagination {

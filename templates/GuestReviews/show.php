@@ -19,7 +19,7 @@ use W1020\HTML\Table;
                 echo "<tr><td><b>$row[title]</b></tr></td>";
                 echo "<tr><td><b>$row[users_name]</b></td></tr>";
                 echo "<tr><td><b>$row[date]</b></td></tr>";
-                echo "<tr><td><a href='?type={$this->data['controllerName']}&action=showReview&id=$row[id]' class='btn btn-warning'>Подробнее</a></td></tr>";
+                echo "<tr><td><a href='?type={$this->data['controllerName']}&action=showReview&id=$row[id]' class='btn btn-warning' id='button_color'>Подробнее</a></td></tr>";
             }
             echo "</table>";
             echo (new Pagination())

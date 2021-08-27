@@ -18,7 +18,7 @@
                 :<br><span><?= $this->data['comments']['users_id'] ?></span><br>
                 <?= $this->data['columnComments']['review'] ?>:<br>
                 <p><?= $this->data['review']['review'] ?></p>
-                <a href="?type=UserReviews&action=show" class='btn btn-warning'>Назад</a>
+                <a href="?type=UserReviews&action=show" class='btn btn-warning' id="button_color">Назад</a>
             </div>
         </div>
         <div class="col">

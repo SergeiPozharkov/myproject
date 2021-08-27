@@ -32,7 +32,7 @@
                 }
 
                 ?>
-                <input type="submit" value="Добавить" class="btn btn-success">
+                <input type="submit" value="Добавить" class="btn btn-success" id="button_color">
             </form>
         </div>
         <div class="col">

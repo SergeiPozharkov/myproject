@@ -23,7 +23,7 @@ use W1020\HTML\Pagination;
                 echo "<tr><td><span><b>$row[unp]</b></span></td></tr>";
                 echo "<tr><td><span><b>$row[legal_name]</b></span></td></tr>";
                 echo "<tr><td><p>" . mb_substr($row['description'], 0, 15) . "...</p></td></tr>";
-                echo "<tr><td><a href='?type={$this->data['controllerName']}&action=ShowOrganisationReviews&id=$row[id]' class='btn btn-warning'>Подробнее</a></td></tr>";
+                echo "<tr><td><a href='?type={$this->data['controllerName']}&action=ShowOrganisationReviews&id=$row[id]' class='btn btn-warning' id='button_color'>Подробнее</a></td></tr>";
             }
             echo "</table>";
             echo (new Pagination())
