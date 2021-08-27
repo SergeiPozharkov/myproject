@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Helper\OrganisationInputChecker;
+use App\Helper\WorkingHours;
 use App\Model\UserOrganisationsModel;
 
 class UserOrganisationsController extends OrganisationsController
@@ -33,7 +35,8 @@ class UserOrganisationsController extends OrganisationsController
 
 
     /**
-     * При попытке пользователя обратиться к методу для отображения формы изменения данных, перенаправляет на главную страницу
+     * При попытке пользователя обратиться к методу для отображения формы изменения данных, перенаправляет на главную
+     * страницу
      */
     public function actionShowEdit(): void
     {
@@ -51,10 +54,56 @@ class UserOrganisationsController extends OrganisationsController
      */
     public function actionAdd(): void
     {
-        $workingHours = ['working_hours' => "$_POST[week_days]$_POST[start_hours]:$_POST[start_minutes]-$_POST[end_hours]:$_POST[end_minutes]"];
+        $workingHoursChecker = new WorkingHours();
+        if ($workingHoursChecker->workingHoursCheck(
+                $_POST['week_days'], $_POST['start_hours'],
+                $_POST['start_minutes'],
+                $_POST['end_hours'],
+                $_POST['end_minutes']
+            ) == true) {
+            $workingHours = [
+                'working_hours' => "$_POST[week_days]$_POST[start_hours]
+                :$_POST[start_minutes]-$_POST[end_hours]:$_POST[end_minutes]"
+            ];
+        } else {
+            $this->redirect("?type=UserOrganisations&action=showadd");
+        }
+        $validate = true;
+        $organisationChecker = new OrganisationInputChecker(
+            $_POST['name'],
+            $_POST['address'],
+            $_POST['phone'],
+            $workingHours['working_hours'],
+            $_POST['unp'],
+            $_POST['legal_name'],
+            $_POST['description']
+        );
+        if (!$organisationChecker->nameCheck()) {
+            $validate = false;
+        } elseif (!$organisationChecker->addressCheck()) {
+            $validate = false;
+        } elseif (!$organisationChecker->phoneCheck()) {
+            $validate = false;
+        } elseif (!$organisationChecker->workingHoursLengthCheck()) {
+            $validate = false;
+        } elseif (!$organisationChecker->unpCheck()) {
+            $validate = false;
+        } elseif (!$organisationChecker->legalNameCheck()) {
+            $validate = false;
+        } elseif (!$organisationChecker->descriptionCheck()) {
+            $validate = false;
+        }
         if ($_POST && array_search("", $_POST) == false) {
-            if (isset($_SESSION["user"]["id"])) {
-                $this->model->addOrganisation($_POST['name'], $_POST['address'], $_POST['phone'], $_POST['social_networks'], $workingHours['working_hours'], $_POST['unp'], $_POST['legal_name'], $_POST['description']);
+            if (isset($_SESSION["user"]["id"]) && $validate == true) {
+                $this->model->addOrganisation(
+                    $_POST['name'],
+                    $_POST['address'],
+                    $_POST['phone'],
+                    $_POST['social_networks'],
+                    $workingHours['working_hours'],
+                    $_POST['unp'], $_POST['legal_name'],
+                    $_POST['description']
+                );
                 $this->redirect("?type=UserOrganisations&action=show");
             }
         } else {

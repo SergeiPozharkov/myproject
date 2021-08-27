@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Helper\ReviewInputChecker;
 use App\Model\UserReviewsModel;
 
 class UserReviewsController extends ReviewsController
@@ -54,8 +55,17 @@ class UserReviewsController extends ReviewsController
      */
     public function actionAdd(): void
     {
-        if ($_POST && !empty($_POST['title']) != '' && !empty($_POST['review']) != '' && !empty($_POST['organisations_id']) != '') {
-            if (isset($_SESSION["user"]["id"])) {
+        $reviewChecker = new ReviewInputChecker($_POST['title'], $_POST['review'], $_POST['organisations_id']);
+        $validate = true;
+        if (!$reviewChecker->titleCheck()) {
+            $validate = false;
+        } elseif (!$reviewChecker->reviewCheck()) {
+            $validate = false;
+        } elseif (!$reviewChecker->organisationIdCheck()) {
+            $validate = false;
+        }
+        if ($_POST && array_search("", $_POST) == false) {
+            if (isset($_SESSION["user"]["id"]) && $validate == true) {
                 $this->model->addReview($_POST['title'], $_POST['review'], date('Y-m-d H:i:s'), $_POST['organisations_id'], $_SESSION['user']['id']);
                 $this->redirect("?type=UserReviews&action=show");
             }

@@ -11,6 +11,7 @@ class OrganisationInputChecker
         protected string $workingHours,
         protected string $unp,
         protected string $legalName,
+        protected string $description
     )
     {
         $this->setName($name);
@@ -19,6 +20,7 @@ class OrganisationInputChecker
         $this->setWorkingHours($workingHours);
         $this->setUnp($unp);
         $this->setLegalName($legalName);
+        $this->setDescription($description);
     }
 
     /**
@@ -68,6 +70,15 @@ class OrganisationInputChecker
     {
         $this->legalName = $legalName;
     }
+
+    /**
+     * @param string $description
+     */
+    public function setDescription(string $description): void
+    {
+        $this->description = $description;
+    }
+
 
     /**
      * Возвращает номер телефона без пробелов и искомых символов
@@ -135,4 +146,12 @@ class OrganisationInputChecker
         return mb_strlen($this->legalName) <= 255;
     }
 
+    /**
+     * Проверяет на максимальную длину дополнительной информации
+     * @return bool
+     */
+    public function descriptionCheck(): bool
+    {
+        return mb_strlen($this->description) <= 255;
+    }
 }

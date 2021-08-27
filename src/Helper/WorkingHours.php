@@ -21,17 +21,16 @@ class WorkingHours
         string|int $endMinutes
     ): bool
     {
-        if (is_string($weekDays) == true) {
-            $result = true;
-        } elseif ($startHours == abs($startHours)) {
-            $result = true;
-        } elseif ($startMinutes == abs($startMinutes)) {
-            $result = true;
-        } elseif ($endHours == abs($endHours)) {
-            $result = true;
-        } elseif ($endMinutes == abs($endMinutes)) {
-            $result = true;
-        } else {
+        $result = true;
+        if (is_string($weekDays) != true) {
+            $result = false;
+        } elseif ($startHours != abs($startHours)) {
+            $result = false;
+        } elseif ($startMinutes != abs($startMinutes)) {
+            $result = false;
+        } elseif ($endHours != abs($endHours)) {
+            $result = false;
+        } elseif ($endMinutes != abs($endMinutes)) {
             $result = false;
         }
         return $result;

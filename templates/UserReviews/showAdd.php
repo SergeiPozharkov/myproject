@@ -23,8 +23,6 @@
                     } elseif ($field == "title") {
                         echo $value . "<br>";
                         echo "<input id='review_title' name='$field'><br>";
-                    } else {
-                        echo "<input type='hidden' name='$field' value='" . ($this->data['row'][$field] ?? "") . "'>";
                     }
                 }
 
