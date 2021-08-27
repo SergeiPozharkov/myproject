@@ -62,8 +62,8 @@ class UserOrganisationsController extends OrganisationsController
                 $_POST['end_minutes']
             ) == true) {
             $workingHours = [
-                'working_hours' => "$_POST[week_days]$_POST[start_hours]
-                :$_POST[start_minutes]-$_POST[end_hours]:$_POST[end_minutes]"
+                'working_hours' =>
+                    "$_POST[week_days]$_POST[start_hours]:$_POST[start_minutes]-$_POST[end_hours]:$_POST[end_minutes]"
             ];
         } else {
             $this->redirect("?type=UserOrganisations&action=showadd");
