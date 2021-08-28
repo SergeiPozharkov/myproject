@@ -101,7 +101,7 @@ if (!empty($_SESSION['warnings'])) {
 $this->body();
 ?>
 <footer>
-    <section>email:pozharkov.sergej@gmail.com, tel:+375-29-374-82-72</section>
+    <section>email:pozharkov.sergej@gmail.com, tel:+375 29 374 82 72</section>
     <section>
         <a href="https://github.com/SergeiPozharkov/myproject" id="link">GITHUB</a>
         <a href="https://www.linkedin.com/in/sergey-pozharkov-131705208/" id="link">LINKEDIN</a>

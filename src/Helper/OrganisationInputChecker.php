@@ -25,70 +25,72 @@ class OrganisationInputChecker
 
     /**
      * @param string $name
+     * @return $this
      */
-    public function setName(string $name): void
+    public function setName(string $name): static
     {
         $this->name = $name;
+        return $this;
     }
 
     /**
      * @param string $address
+     * @return $this
      */
-    public function setAddress(string $address): void
+    public function setAddress(string $address): static
     {
         $this->address = $address;
+        return $this;
     }
 
     /**
      * @param string $phone
+     * @return $this
      */
-    public function setPhone(string $phone): void
+    public function setPhone(string $phone): static
     {
         $this->phone = $phone;
+        return $this;
     }
 
     /**
      * @param string $workingHours
+     * @return $this
      */
-    public function setWorkingHours(string $workingHours): void
+    public function setWorkingHours(string $workingHours): static
     {
         $this->workingHours = $workingHours;
+        return $this;
     }
 
     /**
      * @param string $unp
+     * @return $this
      */
-    public function setUnp(string $unp): void
+    public function setUnp(string $unp): static
     {
         $this->unp = $unp;
+        return $this;
     }
 
     /**
      * @param string $legalName
+     * @return $this
      */
-    public function setLegalName(string $legalName): void
+    public function setLegalName(string $legalName): static
     {
         $this->legalName = $legalName;
+        return $this;
     }
 
     /**
      * @param string $description
+     * @return $this
      */
-    public function setDescription(string $description): void
+    public function setDescription(string $description): static
     {
         $this->description = $description;
-    }
-
-
-    /**
-     * Возвращает номер телефона без пробелов и искомых символов
-     * @param string $phone
-     * @return string
-     */
-    public function replace(string $phone): string
-    {
-        return str_replace(' ', '', $phone);
-
+        return $this;
     }
 
     /**
@@ -124,7 +126,7 @@ class OrganisationInputChecker
      */
     public function workingHoursLengthCheck(): bool
     {
-        return mb_strlen($this->workingHours) <= 45;
+        return mb_strlen($this->workingHours) == 19;
     }
 
 
@@ -134,7 +136,11 @@ class OrganisationInputChecker
      */
     public function unpCheck(): bool
     {
-        return mb_strlen($this->unp) == 9;
+        if (is_numeric($this->unp) == true) {
+            return mb_strlen($this->unp) == 9;
+        } else {
+            return false;
+        }
     }
 
     /**
@@ -143,7 +149,7 @@ class OrganisationInputChecker
      */
     public function legalNameCheck(): bool
     {
-        return mb_strlen($this->legalName) <= 255;
+        return mb_strlen($this->legalName) <= 100;
     }
 
     /**
