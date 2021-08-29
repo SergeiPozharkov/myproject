@@ -22,7 +22,7 @@
         <br>
     <?php endforeach; ?>
 </div>
-<hr>
+<hr style="height:5px">
 <div class="container">
     <div class="row">
         <div class="col">

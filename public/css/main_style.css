@@ -1,9 +1,9 @@
-#review_text {
+.review_text {
     width: 500px;
     height: 100px;
 }
 
-#review_title {
+.review_title {
     width: 300px;
 }
 

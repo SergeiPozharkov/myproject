@@ -18,8 +18,8 @@
                 echo "<tr><td><span><b>$row[unp]</b></span></td></tr>";
                 echo "<tr><td><span><b>$row[legal_name]</b></span></td></tr>";
                 echo "<tr><td><p>" . mb_substr($row['description'], 0, 15) . "...</p></td></tr>";
-                echo "<tr><td><a href='?type={$this->data['controllerName']}&action=del&id=$row[id]'>❌</a>";
-                echo "<a href='?type={$this->data['controllerName']}&action=showedit&id=$row[id]'>✏</a></td></tr>";
+                echo "<tr><td><a href='?type={$this->data['controllerName']}&action=del&id=$row[id]'><img src='/public/images/cross.png'></a>";
+                echo "<a href='?type={$this->data['controllerName']}&action=showedit&id=$row[id]'><img src='/public/images/pencil.png'></a></td></tr>";
             }
             echo "</table>";
             echo (new Pagination())

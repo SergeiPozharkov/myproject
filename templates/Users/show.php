@@ -14,8 +14,8 @@ use W1020\HTML\Table;
                 echo (new Table())
                     ->setData($this->data["table"])
                     ->setHeaders($this->data["comments"])
-                    ->addColumn(fn($row) => "<a href='?type={$this->data['controllerName']}&action=del&id=$row[id]'>❌</a>")
-                    ->addColumn(fn($row) => "<a href='?type={$this->data['controllerName']}&action=showedit&id=$row[id]'>✏</a>")
+                    ->addColumn(fn($row) => "<a href='?type={$this->data['controllerName']}&action=del&id=$row[id]'><img src='/public/images/cross.png'></a>")
+                    ->addColumn(fn($row) => "<a href='?type={$this->data['controllerName']}&action=showedit&id=$row[id]'><img src='/public/images/pencil.png'></a>")
                     ->setClass("table table-dark table-borderless")
                     ->html();
                 echo (new Pagination())
