@@ -1,4 +1,11 @@
 {
+  "authors": [
+    {
+      "name": "Pozharkov Sergey",
+      "email": "pozharkov.sergej@gmail.com",
+      "role": "Developer"
+    }
+  ],
   "description": "simple MVC application",
   "license": "MIT",
   "require": {

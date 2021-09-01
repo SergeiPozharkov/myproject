@@ -84,7 +84,7 @@ class UserReviewsController extends ReviewsController
     }
 
     /**
-     * Отображает пользователю отзыв и всю сопутствующую информацию
+     * Отображает пользователю отзыв целиком
      * @throws \Exception
      */
     public function actionShowReview(): void
