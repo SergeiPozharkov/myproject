@@ -98,7 +98,7 @@ class AutController extends AbstractController
 
         if ($ok) {
             $config = include __DIR__ . "/../../config.php";
-            $this->model->addNewUser($_POST['login'], md5($_POST['pass1'] . $config['salt']), $_POST['name'], 'user');
+            $this->model->addNewUser($_POST['login'], md5($_POST['pass1'] . $config['salt']), $_POST['name']);
             $this->redirect("?");
         } else {
             $_SESSION['regData'] = $_POST;
