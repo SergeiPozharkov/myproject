@@ -10,6 +10,29 @@ use W1020\Table as ORMTable;
  */
 class ReviewsModel extends ORMTable
 {
+    public function getPage(int $page = 1): array
+    {
+        $sql=<<<SQL
+SELECT
+    `reviews`.`id`,
+    `reviews`.`title`,
+    `reviews`.`review`,
+    `reviews`.`date`,
+    `organisations`.`name` AS 'organisations_id',
+    `users`.`name` AS 'users_id'
+FROM
+    `reviews`,
+    `organisations`,
+    `users`
+WHERE
+    `reviews`.`organisations_id` = `organisations`.`id` AND `reviews`.`users_id` = `users`.`id`
+SQL;
+
+        return $this->query(
+            "$sql LIMIT " . (($page - 1) * $this->pageSize) . ",$this->pageSize;"
+        );
+    }
+
     /**
      * Выбирает все имена пользователей из таблицы БД
      * @return array<array>
