@@ -97,6 +97,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     color: blue;
 }
 
+hr {
+    margin-top: unset !important;
+}
+
 footer {
     background-color: rgb(255, 145, 55);
     position: absolute;
