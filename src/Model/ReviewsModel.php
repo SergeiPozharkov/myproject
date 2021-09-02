@@ -10,9 +10,14 @@ use W1020\Table as ORMTable;
  */
 class ReviewsModel extends ORMTable
 {
+    /**
+     * @param int $page
+     * @return array<array>
+     * @throws \Exception
+     */
     public function getPage(int $page = 1): array
     {
-        $sql=<<<SQL
+        $sql = <<<SQL
 SELECT
     `reviews`.`id`,
     `reviews`.`title`,
