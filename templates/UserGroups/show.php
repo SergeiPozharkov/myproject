@@ -5,7 +5,7 @@ use W1020\HTML\Table;
 
 ?>
 <div id="main">
-    <h1 id="form_title">Таблица пользователей:</h1>
+    <h1 id="form_title">Таблица групп пользователей:</h1>
 </div>
 <div class="container">
     <div class="row">

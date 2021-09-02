@@ -10,6 +10,12 @@ class UserGroupsController extends Table
 {
     protected string $tableName = "user_groups";
 
+    public function actionShow(): void
+    {
+        parent::actionShow();
+        $this->view->setTemplate("UserGroups/show");
+    }
+
     public function actionShowEdit(): void
     {
         parent::actionShowEdit();

@@ -20,25 +20,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     margin-bottom: 10px;
 }
 
-.admin_show {
-    position: absolute;
-    bottom: 10px;
-    margin: -100px 500px 40px -200px;
-}
-
-.admin_show_user_groups {
-    position: absolute;
-    bottom: 250px;
-    margin: 0 auto;
-}
-
-.admin_show_user {
-    position: absolute;
-    top: 50%;
-    left: 30%;
-    margin: -100px 0 0 -150px;
-}
-
 .page-link {
     background-color: rgb(255, 145, 55) !important;
 }
