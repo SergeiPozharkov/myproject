@@ -11,6 +11,7 @@ use W1020\Table as ORMTable;
 class ReviewsModel extends ORMTable
 {
     /**
+     * Выбирает все данные отзывов
      * @param int $page
      * @return array<array>
      * @throws \Exception
