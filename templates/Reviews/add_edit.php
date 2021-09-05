@@ -1,3 +1,4 @@
+<?php use W1020\HTML\Select;?>
 <div id="main">
     <h1 id="form_title">Форма добавления/редактирования отзыва:</h1>
 </div>
@@ -11,20 +12,18 @@
                 foreach ($this->data["comments"] as $field => $value) {
                     if ($field == "organisations_id") {
                         echo $value . "<br>";
-                        echo "<select id='select_add_review' name='$field'>";
-                        foreach ($this->data["organisationsList"] as $value => $text) {
-                            echo "<option value='$value' " . (($this->data["row"]['organisations_id'] ?? "" == $value) ?
-                                    "selected" : "") . ">$text</option>";
-                        }
-                        echo "</select><br>";
+                        echo (new Select())
+                                ->setName($field)
+                                ->setData($this->data["organisationsList"])
+                                ->setSelected($this->data["row"]['organisations_id'] ?? "")
+                                ->html() . '<br>';
                     } elseif ($field == "users_id") {
                         echo $value . "<br>";
-                        echo "<select id='select_add_review' name='$field'>";
-                        foreach ($this->data["usersList"] as $value => $text) {
-                            echo "<option value='$value' " . (($this->data["row"]['users_id'] ?? "" == $value) ?
-                                    "selected" : "") . ">$text</option>";
-                        }
-                        echo "</select><br>";
+                        echo (new Select())
+                                ->setName($field)
+                                ->setData($this->data["usersList"])
+                                ->setSelected($this->data["row"]['users_id'] ?? "")
+                                ->html() . '<br>';
                     } elseif ($field == "date") {
                         echo "<input type='hidden' name='$field' value='" . ($this->data['row'][$field] ??
                                 date('Y-m-d H:i:s')) . "'>";

@@ -5,19 +5,21 @@ Distributor: http://bootstraptema.ru/
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
+select {
+    padding: 0 !important;
+}
+
+#review_text {
+    width: 500px;
+    height: 100px;
+}
+
 #border_color {
     border: solid black 2px;
 }
 
 #button_color {
     background-color: rgb(255, 145, 55);
-}
-
-#select_add_review {
-    padding: 0;
-    height: auto;
-    width: auto;
-    margin-bottom: 10px;
 }
 
 .page-link {
