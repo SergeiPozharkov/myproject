@@ -54,3 +54,7 @@ admin - login
 For the authorization module to work properly, the following should be uncommented:  
 Route: myproject/src/Controller/AutController
 ![](for_readme/uncommented_code.jpg)
+___
+To change the parameters for connecting to the DB, page size and salt, edit the Config.php file located at the root of
+the project.  
+![](for_readme/Config.jpg)
