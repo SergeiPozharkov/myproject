@@ -42,5 +42,14 @@ ___
 ## Programming languages and technologies
 
 ![](for_readme/pl_and_technologies.jpg)
-
 ---
+
+## Deploying the project
+
+To deploy a project on a local machine, there is a test DB dump in the root of the repository.  
+Admin:  
+admin - login  
+123 - pass  
+For the authorization module to work properly, the following should be uncommented:  
+Route: myproject/src/Controller/AutController
+![](for_readme/uncommented_code.jpg)
