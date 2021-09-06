@@ -42,6 +42,7 @@ ___
 ## Programming languages and technologies
 
 ![](for_readme/pl_and_technologies.jpg)
+
 ---
 
 ## Deploying the project
