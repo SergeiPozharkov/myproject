@@ -58,10 +58,21 @@ class OrganisationsController extends Table
      */
     public function actionAdd(): void
     {
-        $workingHours = ['working_hours' => "$_POST[week_days]$_POST[start_hours]:$_POST[start_minutes]-$_POST[end_hours]:$_POST[end_minutes]"];
+        $workingHours = [
+            'working_hours' => "$_POST[week_days]$_POST[start_hours]:$_POST[start_minutes]-$_POST[end_hours]:$_POST[end_minutes]"
+        ];
         if ($_POST && array_search("", $_POST) == false) {
             if (isset($_SESSION["user"]["id"])) {
-                $this->model->addOrganisation($_POST['name'], $_POST['address'], $_POST['phone'], $_POST['social_networks'], $workingHours['working_hours'], $_POST['unp'], $_POST['legal_name'], $_POST['description']);
+                $this->model->addOrganisation(
+                    $_POST['name'],
+                    $_POST['address'],
+                    $_POST['phone'],
+                    $_POST['social_networks'],
+                    $workingHours['working_hours'],
+                    $_POST['unp'],
+                    $_POST['legal_name'],
+                    $_POST['description']
+                );
                 $this->redirect("?type=Organisations&action=show");
             }
         } else {
