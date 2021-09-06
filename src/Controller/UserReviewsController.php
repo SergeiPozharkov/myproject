@@ -66,7 +66,13 @@ class UserReviewsController extends ReviewsController
         }
         if ($_POST && array_search("", $_POST) == false) {
             if (isset($_SESSION["user"]["id"]) && $validate == true) {
-                $this->model->addReview($_POST['title'], $_POST['review'], date('Y-m-d H:i:s'), $_POST['organisations_id'], $_SESSION['user']['id']);
+                $this->model->addReview(
+                    $_POST['title'],
+                    $_POST['review'],
+                    date('Y-m-d H:i:s'),
+                    $_POST['organisations_id'],
+                    $_SESSION['user']['id']
+                );
                 $this->redirect("?type=UserReviews&action=show");
             }
         } else {
