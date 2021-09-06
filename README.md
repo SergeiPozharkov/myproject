@@ -57,4 +57,5 @@ Route: myproject/src/Controller/AutController
 ___
 To change the parameters for connecting to the DB, page size and salt, edit the Config.php file located at the root of
 the project.  
-![](for_readme/Config.jpg)
+![](for_readme/Config.jpg)  
+[Link to presentation](https://docs.google.com/presentation/d/19Uj8T_nyUYqoEjVvUixZfdiivdGJC86MtUfl5DOQy54/edit?usp=sharing)
