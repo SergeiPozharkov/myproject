@@ -8,6 +8,9 @@
         </div>
         <div class="col">
             <?php
+            foreach ($this->data['table'] as &$row_date) {
+                $row_date['date'] = date("d-m-Y H:i:s", strtotime($row_date['date']));
+            }
             echo "<table>";
             foreach ($this->data['table'] as $key => $row) {
                 echo "<tr><td><b>$row[title]</b></tr></td>";

@@ -8,12 +8,16 @@
         </div>
         <div class="col">
             <?php
+            foreach ($this->data['table'] as &$row_date) {
+                $row_date['date'] = date("d-m-Y H:i:s", strtotime($row_date['date']));
+            }
             echo "<table>";
-            foreach ($this->data['table'] as $key => $row) {
+            foreach ($this->data['table'] as $row) {
                 echo "<tr><td><b>$row[title]</b></tr></td>";
                 echo "<tr><td><b>$row[users_name]</b></td></tr>";
                 echo "<tr><td><b>$row[date]</b></td></tr>";
-                echo "<tr><td><a href='?type={$this->data['controllerName']}&action=showReview&id=$row[id]' class='btn btn-warning' id='button_color'>Подробнее</a></td></tr>";
+                echo "<tr><td><a href='?type={$this->data['controllerName']}&action=showReview&id=$row[id]' 
+class='btn btn-warning' id='button_color'>Подробнее</a></td></tr>";
             }
             echo "</table>";
             echo (new Pagination())
