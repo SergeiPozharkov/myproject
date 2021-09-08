@@ -29,6 +29,11 @@
         </div>
         <div class="col">
             <div class="show_review">
+                <?php
+                foreach ($this->data['organisationComments'] as &$row_date) {
+                    $row_date['date'] = date("d-m-Y H:i:s", strtotime($row_date['date']));
+                }
+                ?>
                 <?php foreach ($this->data['organisationComments'] as $row): ?>
                     <h1><?= $row['title'] ?></h1>
                     <?= $this->data['reviewsColumnComments']['organisations_id'] ?>:<br>
