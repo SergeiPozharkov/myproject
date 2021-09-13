@@ -79,18 +79,25 @@ class UserOrganisationsController extends OrganisationsController
             $_POST['description']
         );
         if (!$organisationChecker->nameCheck()) {
+            $_SESSION['warnings'][] = 'Превышена длина названия организации!';
             $validate = false;
         } elseif (!$organisationChecker->addressCheck()) {
+            $_SESSION['warnings'][] = 'Превышена длина адреса организации!';
             $validate = false;
         } elseif (!$organisationChecker->phoneCheck()) {
+            $_SESSION['warnings'][] = 'Превышена длина телефона!';
             $validate = false;
         } elseif (!$organisationChecker->workingHoursLengthCheck()) {
+            $_SESSION['warnings'][] = 'Превышена длина времени работы!';
             $validate = false;
         } elseif (!$organisationChecker->unpCheck()) {
+            $_SESSION['warnings'][] = 'Превышена длина УНП!';
             $validate = false;
         } elseif (!$organisationChecker->legalNameCheck()) {
+            $_SESSION['warnings'][] = 'Превышена длина юридического названия организации!';
             $validate = false;
         } elseif (!$organisationChecker->descriptionCheck()) {
+            $_SESSION['warnings'][] = 'Превышена длина дополнительной информации!';
             $validate = false;
         }
         if ($_POST && array_search("", $_POST) == false) {

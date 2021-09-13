@@ -58,8 +58,10 @@ class UserReviewsController extends ReviewsController
         $reviewChecker = new ReviewInputChecker($_POST['title'], $_POST['review'], $_POST['organisations_id']);
         $validate = true;
         if (!$reviewChecker->titleCheck()) {
+            $_SESSION['warnings'][] = 'Превышена длина заголовка отзыва!';
             $validate = false;
         } elseif (!$reviewChecker->reviewCheck()) {
+            $_SESSION['warnings'][] = 'Превышена длина отзыва!';
             $validate = false;
         } elseif (!$reviewChecker->organisationIdCheck()) {
             $validate = false;
