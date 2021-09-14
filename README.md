@@ -50,7 +50,10 @@ ___
 To deploy a project on a local machine, there is a test DB dump in the root of the repository.  
 Admin:  
 admin - login  
-123 - pass  
+123 - password  
+User:  
+antip123 - login  
+123 - password  
 For the authorization module to work properly, the following should be uncommented:  
 Route: myproject/src/Controller/AutController
 ![](for_readme/uncommented_code.jpg)
